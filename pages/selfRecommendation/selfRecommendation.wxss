@@ -1,0 +1,5 @@
+/* pages/selfRecommendation/selfRecommendation.wxss */
+.custom-navbar {
+  --td-navbar-color: #266bdf;
+  --td-navbar-bg-color: #fff;
+}

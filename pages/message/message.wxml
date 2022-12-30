@@ -1,0 +1,2 @@
+<!--pages/message/message.wxml-->
+<t-navbar class="custom-navbar"  title="消息" t-class-title="nav-title" />

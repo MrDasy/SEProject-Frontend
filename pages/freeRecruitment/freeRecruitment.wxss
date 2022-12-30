@@ -1,0 +1,8 @@
+/* pages/freeRecruitment/freeRecruitment.wxss */
+.custom-navbar {
+  --td-navbar-color: #266bdf;
+  --td-navbar-bg-color: #fff;
+}
+.custom-tabs {
+  margin-bottom: 32rpx;
+}

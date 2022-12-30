@@ -1,14 +1,56 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/freeRecruitment/freeRecruitment",
+    "pages/selfRecommendation/selfRecommendation",
+    "pages/message/message",
+    "pages/home/home"
+
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#e6e6e6",
+    "navigationBarTitleText": "CravingStudy",
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel"
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#0052d9",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/freeRecruitment/freeRecruitment",
+      "text": "自由招聘",
+      "iconPath":"images/tarbar/freeRecruitment.png",
+      "selectedIconPath":"images/tarbar/freeRecruitment_s.png"
+    }, 
+    {
+      "pagePath": "pages/selfRecommendation/selfRecommendation",      
+      "text": "大学生自荐",
+      "iconPath":"images/tarbar/selfRecommendation.png",
+      "selectedIconPath":"images/tarbar/selfRecommendation_s.png"
+    },
+    {
+      "pagePath": "pages/message/message",      
+      "text": "消息",
+      "iconPath":"images/tarbar/message.png",
+      "selectedIconPath":"images/tarbar/message_s.png"
+    },
+    {
+      "pagePath": "pages/home/home",      
+      "text": "个人中心",
+      "iconPath":"images/tarbar/home.png",
+      "selectedIconPath":"images/tarbar/home_s.png"
+    }
+   
+    ],
+    "position": "bottom"
+  }  
+
 }

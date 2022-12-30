@@ -1,0 +1,26 @@
+<wxs src="../common/utils.wxs" module="_" />
+
+<view style="{{ customStyle }}" class="{{classPrefix}} {{prefix}}-class">
+  <slot />
+
+  <view
+    class="{{classPrefix}}__sidebar {{prefix}}-class-sidebar"
+    id="id-{{classPrefix}}__bar"
+    catch:touchmove="onTouchMove"
+    catch:touchcancel="onTouchCancel"
+    catch:touchend="onTouchEnd"
+  >
+    <view
+      class="{{_.cls(classPrefix + '__sidebar-item', [['active', activeAnchor === item]])}} {{prefix}}-class-sidebar-item"
+      wx:for="{{ _indexList }}"
+      wx:key="index"
+      bind:tap="onClick"
+      data-index="{{index}}"
+    >
+      {{ item }}
+      <view class="{{classPrefix}}__sidebar-tips" wx:if="{{ showTips && activeAnchor === item }}">
+        {{ activeAnchor }}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/home/home.wxml-->
+<t-navbar class="custom-navbar"  title="个人中心" t-class-title="nav-title" />
+

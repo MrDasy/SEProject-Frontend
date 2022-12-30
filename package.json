@@ -1,0 +1,22 @@
+{
+  "name": "seproject-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDasy/SEProject-Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDasy/SEProject-Frontend/issues"
+  },
+  "homepage": "https://github.com/MrDasy/SEProject-Frontend#readme",
+  "dependencies": {
+    "tdesign-miniprogram": "^0.32.0"
+  }
+}

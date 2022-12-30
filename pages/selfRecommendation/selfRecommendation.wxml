@@ -1,0 +1,2 @@
+<!--pages/selfRecommendation/selfRecommendation.wxml-->
+<t-navbar class="custom-navbar"  title="大学生自荐" t-class-title="nav-title" />
