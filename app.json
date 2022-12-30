@@ -1,12 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/freeRecruitment/freeRecruitment",
+    "pages/freeRecruitmentDetail/freeRecruitmentDetail",
+    "pages/routePlanning/routePlanning",
     "pages/selfRecommendation/selfRecommendation",
     "pages/message/message",
     "pages/home/home"
 
   ],
-  "window":{
+  "window": {
     "navigationStyle": "custom",
     "backgroundTextStyle": "light",
     "backgroundColor": "#e6e6e6",
@@ -16,7 +18,11 @@
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
     "t-tabs": "tdesign-miniprogram/tabs/tabs",
-    "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel"
+    "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-image": "tdesign-miniprogram/image/image",
+    "t-button": "tdesign-miniprogram/button/button"
+
   },
 
   "sitemapLocation": "sitemap.json",
@@ -25,32 +31,46 @@
     "selectedColor": "#0052d9",
     "backgroundColor": "white",
     "list": [{
-      "pagePath": "pages/freeRecruitment/freeRecruitment",
-      "text": "自由招聘",
-      "iconPath":"images/tarbar/freeRecruitment.png",
-      "selectedIconPath":"images/tarbar/freeRecruitment_s.png"
-    }, 
-    {
-      "pagePath": "pages/selfRecommendation/selfRecommendation",      
-      "text": "大学生自荐",
-      "iconPath":"images/tarbar/selfRecommendation.png",
-      "selectedIconPath":"images/tarbar/selfRecommendation_s.png"
-    },
-    {
-      "pagePath": "pages/message/message",      
-      "text": "消息",
-      "iconPath":"images/tarbar/message.png",
-      "selectedIconPath":"images/tarbar/message_s.png"
-    },
-    {
-      "pagePath": "pages/home/home",      
-      "text": "个人中心",
-      "iconPath":"images/tarbar/home.png",
-      "selectedIconPath":"images/tarbar/home_s.png"
-    }
-   
+        "pagePath": "pages/freeRecruitment/freeRecruitment",
+        "text": "自由招聘",
+        "iconPath": "images/tarbar/freeRecruitment.png",
+        "selectedIconPath": "images/tarbar/freeRecruitment_s.png"
+      },
+      {
+        "pagePath": "pages/selfRecommendation/selfRecommendation",
+        "text": "大学生自荐",
+        "iconPath": "images/tarbar/selfRecommendation.png",
+        "selectedIconPath": "images/tarbar/selfRecommendation_s.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/tarbar/message.png",
+        "selectedIconPath": "images/tarbar/message_s.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "个人中心",
+        "iconPath": "images/tarbar/home.png",
+        "selectedIconPath": "images/tarbar/home_s.png"
+      }
+
     ],
     "position": "bottom"
-  }  
+  },
+
+
+  "plugins": {
+
+    "citySelector": {
+      "version": "1.0.2",
+      "provider": "wx63ffb7b7894e99ae"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  }
 
 }

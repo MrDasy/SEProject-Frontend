@@ -1,0 +1,32 @@
+<!--pages/freeRecruitmentDetail/freeRecruitmentDetail.wxml-->
+<t-navbar class="custom-navbar" title="招聘详情" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
+
+<!-- 标题 -->
+<view class='item'>
+  <view>
+    <view class='title'>初三·化学</view>
+    <view class='titleDetail'>授课方式：线上/线下</view>
+  </view>
+  <view class='salary'>200~250/h</view>
+</view>
+
+<!-- 发布人 -->
+<t-cell title="徐女士" description="上海市嘉定区">
+  <view class="avatar" slot="left-icon">
+    <t-image src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" width="60" height="60" shape="circle" />
+  </view>
+</t-cell>
+
+<!-- 职位描述 -->
+<view class='item2'>
+
+  <view class='title2'>职位描述</view>
+  <view class='titleDetail'>工作时间：周一 18:30-20:30</view>
+  <view class='titleDetail'>工作地址：</view>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" show-compass></map>
+
+    <t-button bindtap="route" theme="primary" icon="pin" shape="round">路程规划</t-button>
+
+
+
+</view>

@@ -1,0 +1,2 @@
+<!--pages/routePlanning/routePlanning.wxml-->
+<t-navbar class="custom-navbar" title="路程规划" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />

@@ -2,15 +2,41 @@
 <t-navbar class="custom-navbar" title="自由招聘" t-class-title="nav-title" />
 
 <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
-  <t-tab-panel label="列表" value="0" customStyle="{{tabPanelCustomStyle}}">
-  标签一内容
-  <view>
-  
-  </view>
+  <t-tab-panel label="列表" value="0">
 
+    <selector-component show="{{selectorVisible}}" key="ZA6BZ-6OKER-XXBWY-WXBEQ-PY3T6-XPFCM" referer="CravingStudy" bindselect="onSelectCity">
+    </selector-component>
+    <t-button bindtap="showSelector" theme="primary" icon="pin" shape="round">{{selectedCity.name}}</t-button>
+
+    <view class='list'>
+      <view class="divLine"></view>
+      <navigator url='../freeRecruitmentDetail/freeRecruitmentDetail'>
+        <view class='item'>
+          <view>
+            <view class='title'>初三·化学</view>
+            <view class='info'>内容介绍</view>
+            <view class='pubtime'>地点：上海市嘉定区</view>
+          </view>
+          <view class='salary'>150~200/h</view>
+        </view>
+        <view class="divLine"></view>
+      </navigator>
+
+      <navigator url="../routePlanning/routePlanning" open-type="reLaunch">
+        <view class='item'>
+          <view>
+            <view class='title'>初三·化学</view>
+            <view class='info'>内容介绍</view>
+            <view class='pubtime'>地点：上海市嘉定区</view>
+          </view>
+          <view class='salary'>150~200/h</view>
+        </view>
+        <view class="divLine"></view>
+      </navigator>
+
+    </view>
   </t-tab-panel>
 
-
-  <t-tab-panel label="地图" value="1" customStyle="{{tabPanelCustomStyle}}">标签二内容</t-tab-panel>
+  <t-tab-panel label="地图" value="1">标签二内容</t-tab-panel>
 
 </t-tabs>

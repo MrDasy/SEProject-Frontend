@@ -1,0 +1,9 @@
+/* pages/routePlanning/routePlanning.wxss */
+page{
+  background-color: #e7e7e75d;
+  }
+  
+  .custom-navbar {
+    --td-navbar-color: #266bdf;
+    --td-navbar-bg-color: #fff;
+  }
