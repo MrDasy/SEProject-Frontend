@@ -1,2 +1,30 @@
 <!--pages/selfRecommendation/selfRecommendation.wxml-->
 <t-navbar class="custom-navbar"  title="大学生自荐" t-class-title="nav-title" />
+
+<view class='list'>
+      <view class="divLine"></view>
+      <navigator url='../selfRecommendationDetail/selfRecommendationDetail'>
+        <view class='item'>
+          <view>
+            <view class='title'>初三·化学</view>
+            <view class='info'>内容介绍</view>
+            <view class='pubtime'>地点：上海市嘉定区</view>
+          </view>
+          <view class='salary'>150~200/h</view>
+        </view>
+        <view class="divLine"></view>
+      </navigator>
+
+      <navigator url="../selfRecommendationDetail/selfRecommendationDetail" >
+        <view class='item'>
+          <view>
+            <view class='title'>初三·化学</view>
+            <view class='info'>内容介绍</view>
+            <view class='pubtime'>地点：上海市嘉定区</view>
+          </view>
+          <view class='salary'>150~200/h</view>
+        </view>
+        <view class="divLine"></view>
+      </navigator>
+
+    </view>

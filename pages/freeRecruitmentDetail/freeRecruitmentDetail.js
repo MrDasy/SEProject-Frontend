@@ -9,6 +9,13 @@ Page({
   data: {
     longitude:116.40400,
     latitude:39.92800,
+    mapId: "map" ,
+    confirmBtn: { content: '确定', variant: 'base' },
+    dialogKey: '',
+    showText: false,
+    showMultiText: false,
+    showTextAndTitle: false,
+    showMultiTextAndTitle: false,
 
 
   },
@@ -27,9 +34,23 @@ Page({
     wx.navigateTo({
       url: '../routePlanning/routePlanning'
     })
-
-
   },
+  moveTolocation: function () {
+    //mapId 就是你在 map 标签中定义的 id
+    let Id = this.data.mapId
+    var mapCtx = wx.createMapContext(Id);
+    mapCtx.moveToLocation();
+  },
+  showDialog(e) {
+    const { key } = e.currentTarget.dataset;
+    this.setData({ [key]: true, dialogKey: key });
+  },
+
+  closeDialog() {
+    const { dialogKey } = this.data;
+    this.setData({ [dialogKey]: false });
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

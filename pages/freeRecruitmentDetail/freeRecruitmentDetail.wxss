@@ -60,10 +60,22 @@ map {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
 .title2 {
   font-size: 40rpx;
   font-weight: 70rpx;
   margin-bottom: 20rpx;
+}
+
+.buttonlist{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+
+.box {
+  margin:  32rpx;
 }

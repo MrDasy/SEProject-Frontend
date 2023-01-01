@@ -24,9 +24,31 @@
   <view class='titleDetail'>工作时间：周一 18:30-20:30</view>
   <view class='titleDetail'>工作地址：</view>
   <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" show-compass></map>
-
+  <view class="buttonlist">
+    <t-button bindtap="moveTolocation" theme="primary" icon="location" shape="round">返回地址</t-button>
     <t-button bindtap="route" theme="primary" icon="pin" shape="round">路程规划</t-button>
+  </view>
 
+  <view class="box">
+  <t-button
+    t-class="wrapper"
+    theme="primary"
+    icon="tips" 
+    size="large"
+    variant="outline"
+    data-key="showContentOnly"
+    bind:tap="showDialog"
+    block
+    >开始交流</t-button>
+</view>
 
+  <t-dialog
+    visible="{{showContentOnly}}"
+    title="是否跳转到一对一交流界面？"
+    confirm-btn="{{ confirmBtn }}"
+    cancel-btn="取消"
+    bind:confirm="closeDialog"
+    bind:cancel="closeDialog"
+  />
 
 </view>

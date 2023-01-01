@@ -4,6 +4,7 @@
     "pages/freeRecruitmentDetail/freeRecruitmentDetail",
     "pages/routePlanning/routePlanning",
     "pages/selfRecommendation/selfRecommendation",
+    "pages/selfRecommendationDetail/selfRecommendationDetail",
     "pages/message/message",
     "pages/home/home"
 
@@ -21,7 +22,8 @@
     "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel",
     "t-cell": "tdesign-miniprogram/cell/cell",
     "t-image": "tdesign-miniprogram/image/image",
-    "t-button": "tdesign-miniprogram/button/button"
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-dialog": "tdesign-miniprogram/dialog/dialog"
 
   },
 
