@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/newFreeRecruitment/newFreeRecruitment",
+
     "pages/freeRecruitment/freeRecruitment",
     "pages/freeRecruitmentDetail/freeRecruitmentDetail",
-
+    "pages/newFreeRecruitment/newFreeRecruitment",
     "pages/routePlanning/routePlanning",
     "pages/selfRecommendation/selfRecommendation",
     "pages/selfRecommendationDetail/selfRecommendationDetail",
@@ -30,7 +30,8 @@
     "t-picker": "tdesign-miniprogram/picker/picker",
     "t-picker-item": "tdesign-miniprogram/picker/picker-item",
     "t-icon": "tdesign-miniprogram/icon/icon",
-    "t-input": "tdesign-miniprogram/input/input"
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea"
   },
 
   "sitemapLocation": "sitemap.json",

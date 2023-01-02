@@ -34,7 +34,16 @@ Page({
     ],
 
     location:"",
+    price: '',
+    priceError: false,
+
+    parent_id:"",
     address:"",
+    subject:"",
+    salary:"",
+    description:"",
+    teaching_mode:"",
+    teaching_time:"",
 
   },
 
@@ -47,7 +56,7 @@ Page({
   handleBack() {
     console.log('go back');
   },
-  // 学科选择
+  // 学科、授课方式选择
   onColumnChange(e) {
     console.log('picker pick:', e);
   },
@@ -61,7 +70,6 @@ Page({
       [`${key}Visible`]: false,
       [`${key}Value`]: value,
       [`${key}Text`]: value.join(' '),
-      "filter":"all",
       "subject":e.detail.label[0]+e.detail.label[1],
     });
     console.log("subject="+this.data.subject);
@@ -84,6 +92,7 @@ Page({
   },
 
 
+
   //选择定位
   selectLocation() {
     var that = this
@@ -97,6 +106,7 @@ Page({
           address:app.globalData.address,
         })
         console.log("address="+that.data.address)
+        console.log("description="+that.data.description)
       }
       , fail() {
         wx.getLocation({
@@ -135,6 +145,37 @@ Page({
       }
     })
   },
+
+// 输入薪资
+  onPriceInput(e) {
+    const { priceError } = this.data;
+    const isNumber = /^\d+(\.\d+)?$/.test(e.detail.value);
+    if (priceError === isNumber) {
+      this.setData({
+        priceError: !isNumber,
+      });
+    }
+    this.setData({ 'salary': e.detail.value })
+    console.log("salary="+this.data.salary)
+  },
+
+// 填写简介
+InputDecrip: function (e) {
+  this.setData({ 'description': e.detail.value })
+  console.log("description="+this.data.description)
+},
+
+//输入授课方式
+InputMode: function (e) {
+  this.setData({ 'teaching_mode': e.detail.value })
+  console.log("teaching_mode="+this.data.teaching_mode)
+},
+
+//输入授课方式
+InputTime: function (e) {
+  this.setData({ 'teaching_time': e.detail.value })
+  console.log("teaching_time="+this.data.teaching_time)
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

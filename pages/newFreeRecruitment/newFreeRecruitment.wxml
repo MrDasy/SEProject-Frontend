@@ -18,21 +18,35 @@
     <t-picker-item options="{{seasons}}"></t-picker-item>
 </t-picker>
 
-<view class="divLine"></view>
-<t-input label="填写简介" placeholder="请输入文字"></t-input>
 
+<!-- 选择地址 -->
 <view class="divLine"></view>
 <t-cell title="选择地址" description="{{location}}" bindtap="selectLocation" arrow />
 
-
+<!-- 输入薪资 -->
 <view class="divLine"></view>
 <t-input
-  label="价格"
+  label="输入薪资"
   placeholder="0.00"
-  suffix="元"
+  suffix="元/小时"
   align="right"
   bindchange="onPriceInput"
   value="{{price}}"
-  tips="{{priceError ? '请输入正确的价格' : ''}}"
+  tips="{{priceError ? '请输入正确的薪资' : ''}}"
   t-class-tips="tips"
 />
+
+
+
+<!-- 简介 -->
+<view class="divLine"></view>
+<t-textarea label="填写简介" placeholder="请输入简介,如：孩子当前学习情况，想要达到的效果（不超过100个字符，一个汉字表示两个字符）" maxcharacter="200" indicator bindchange='InputDecrip' />
+
+<!-- 授课方式 -->
+<view class="divLine"></view>
+<t-textarea label="输入理想授课方式" placeholder="例如：线下/线上/线下线上均可，不超过100个字符" maxcharacter="200" indicator bindchange='InputMode' />
+
+<!-- 授课时间 -->
+<view class="divLine"></view>
+<t-textarea label="输入授课时间" placeholder="例如：周日 18:00-20:00" maxcharacter="200" indicator bindchange='InputTime' />
+
