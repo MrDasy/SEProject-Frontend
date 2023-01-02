@@ -23,8 +23,9 @@
     "t-cell": "tdesign-miniprogram/cell/cell",
     "t-image": "tdesign-miniprogram/image/image",
     "t-button": "tdesign-miniprogram/button/button",
-    "t-dialog": "tdesign-miniprogram/dialog/dialog"
-
+    "t-dialog": "tdesign-miniprogram/dialog/dialog",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-item": "tdesign-miniprogram/picker/picker-item"
   },
 
   "sitemapLocation": "sitemap.json",

@@ -64,6 +64,9 @@ Page({
       }
     })
   },
+  handleBack() {
+    console.log('go back');
+  },
   goDetail: function(){
     wx.navigateTo({
       url: '../navigation_car_detail/navigation'

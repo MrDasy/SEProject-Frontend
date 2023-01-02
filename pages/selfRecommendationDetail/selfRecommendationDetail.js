@@ -14,6 +14,9 @@ Page({
   onLoad(options) {
 
   },
+  handleBack() {
+    console.log('go back');
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

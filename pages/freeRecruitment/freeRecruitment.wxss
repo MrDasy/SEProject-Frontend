@@ -1,56 +1,76 @@
 /* pages/freeRecruitment/freeRecruitment.wxss */
-page{
+page {
   background-color: #e7e7e75d;
-  }
-  
+}
+
 .custom-navbar {
   --td-navbar-color: #266bdf;
   --td-navbar-bg-color: #fff;
 }
+
 .custom-tabs {
   margin-bottom: 20rpx;
 }
 
-
+.group {
+  margin: 0 32rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32rpx;
+}
 
 /* 分割线 */
-.divLine{
+.divLine {
   background: #E0E3DA;
   width: 100%;
   height: 5rpx;
- }
-.item{
-  margin-top: 10rpx;
+}
+
+.item {
+  margin: 10rpx;
   padding: 10px 30px;
-  display:flex;
+  display: flex;
   flex-direction: row;
-  justify-content:space-around;
   background-color: #fff;
+  position: relative;
 }
-.title{
-  font-size:40rpx;
-  color:#266bdf;
-  font-weight:60rpx;
-  margin-bottom: 5rpx;
-}
-.info{
-  font-size:30rpx;
-  color:#777;
-  padding-top:20rpx;
-  padding-bottom: 20rpx;
-}
-.pub{
-  font-size: 24rpx;
-  color:#4d4d4d;
-  padding-bottom: 8rpx;
-  padding-right: 40rpx;
-  text-align:right;
-}
-.salary{
+
+.title {
   font-size: 40rpx;
-  font-weight:200rpx;
-  display:flex;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
+  color: #266bdf;
+  font-weight: 60rpx;
+  margin-bottom: 5rpx;
+  position: relative;
+  left: 10rpx;
+  top: 15rpx;
+}
+
+.info {
+  font-size: 30rpx;
+  color: #777;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+  left: 10rpx;
+  top: 20rpx;
+}
+
+.address {
+  font-size: 24rpx;
+  color: #4d4d4d;
+  padding-bottom: 14rpx;
+  padding-right: 40rpx;
+  text-align: right;
+  position: relative;
+  left: 10rpx;
+  top: 25rpx;
+}
+
+.salary {
+  font-size: 40rpx;
+  font-weight: 200rpx;
+  position: absolute;
+  right: 0;
+  margin-right: 35rpx;
+  top: 50%;
 }
