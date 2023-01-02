@@ -18,5 +18,10 @@ App({
   globalData: {
     userInfo: null,
     id:"",
+
+    //location为具体地址
+    //address=location,latitude,longtitude
+    location:"",
+    address:"",
   }
 })

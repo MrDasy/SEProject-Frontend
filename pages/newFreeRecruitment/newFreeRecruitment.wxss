@@ -10,3 +10,10 @@ page{
 .custom-tabs {
   margin-bottom: 20rpx;
 }
+
+/* 分割线 */
+.divLine {
+  background: #e6e6e6;
+  width: 100%;
+  height: 3rpx;
+}

@@ -1,4 +1,6 @@
 // pages/newFreeRecruitment/newFreeRecruitment.js
+const app = getApp()
+const APIKEY = "6ae804ed98934e1490998a422c84d155";
 Page({
 
   /**
@@ -31,6 +33,9 @@ Page({
       { label: '生物', value: '生物' },
     ],
 
+    location:"",
+    address:"",
+
   },
 
   /**
@@ -60,7 +65,6 @@ Page({
       "subject":e.detail.label[0]+e.detail.label[1],
     });
     console.log("subject="+this.data.subject);
-    this.get_recruitment()
   },
 
   onPickerCancel(e) {
@@ -77,6 +81,59 @@ Page({
       dateVisible: true ,
     });
 
+  },
+
+
+  //选择定位
+  selectLocation() {
+    var that = this
+    wx.chooseLocation({
+      success(res) {
+        app.globalData.address=res.address+","+res.latitude + "," + res.longitude,
+        app.globalData.location=res.address,
+        // console.log(res)
+        that.setData({
+          location: app.globalData.location,
+          address:app.globalData.address,
+        })
+        console.log("address="+that.data.address)
+      }
+      , fail() {
+        wx.getLocation({
+          type: 'gcj02',
+          fail() {
+            wx.showModal({
+              title: '获取地图位置失败',
+              content: '为了给您提供准确的天气预报服务,请在设置中授权【位置信息】',
+              success(mRes) {
+                if (mRes.confirm) {
+                  wx.openSetting({
+                    success: function (data) {
+                      if (data.authSetting["scope.userLocation"] === true) {
+                        that.selectLocation()
+                      } else {
+                        wx.showToast({
+                          title: '授权失败',
+                          icon: 'none',
+                          duration: 1000
+                        })
+                      }
+                    }, fail(err) {
+                      console.log(err)
+                      wx.showToast({
+                        title: '唤起设置页失败，请手动打开',
+                        icon: 'none',
+                        duration: 1000
+                      })
+                    }
+                  })
+                }
+              }
+            })
+          }
+        })
+      }
+    })
   },
 
   /**

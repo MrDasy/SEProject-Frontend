@@ -1,6 +1,7 @@
 <!--pages/newFreeRecruitment/newFreeRecruitment.wxml-->
 <t-navbar class="custom-navbar" title="发布招聘" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
 
+<view class="divLine"></view>
 <!-- 学科选择器 -->
 <t-cell class="block" title="选择年级、学科" arrow hover note="{{dateText}}" bind:click="onSeasonPicker" />
 <t-picker 
@@ -17,4 +18,21 @@
     <t-picker-item options="{{seasons}}"></t-picker-item>
 </t-picker>
 
-<t-input label="简介" placeholder="请输入文字"></t-input>
+<view class="divLine"></view>
+<t-input label="填写简介" placeholder="请输入文字"></t-input>
+
+<view class="divLine"></view>
+<t-cell title="选择地址" description="{{location}}" bindtap="selectLocation" arrow />
+
+
+<view class="divLine"></view>
+<t-input
+  label="价格"
+  placeholder="0.00"
+  suffix="元"
+  align="right"
+  bindchange="onPriceInput"
+  value="{{price}}"
+  tips="{{priceError ? '请输入正确的价格' : ''}}"
+  t-class-tips="tips"
+/>
