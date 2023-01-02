@@ -1,38 +1,45 @@
 <!--pages/selfRecommendation/selfRecommendation.wxml-->
-<t-navbar class="custom-navbar"  title="大学生自荐" t-class-title="nav-title" />
+<t-navbar class="custom-navbar" title="大学生自荐" t-class-title="nav-title" />
 
-<view class='v1'>
-  <view>我的发布</view>
-  <view>
-    <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
-  </view>
-
-</view>
-
-<view class='list'>
-      <view class="divLine"></view>
-      <navigator url='../selfRecommendationDetail/selfRecommendationDetail'>
-        <view class='item'>
-          <view>
-            <view class='title'>初三·化学</view>
-            <view class='info'>内容介绍</view>
-            <view class='pubtime'>地点：上海市嘉定区</view>
-          </view>
-          <view class='salary'>150~200/h</view>
+<block wx:if="{{isTutor}}">
+    <view class='v1'>
+        <view>我的发布</view>
+        <view>
+            <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
         </view>
-        <view class="divLine"></view>
-      </navigator>
-
-      <navigator url="../selfRecommendationDetail/selfRecommendationDetail" >
-        <view class='item'>
-          <view>
-            <view class='title'>初三·化学</view>
-            <view class='info'>内容介绍</view>
-            <view class='pubtime'>地点：上海市嘉定区</view>
-          </view>
-          <view class='salary'>150~200/h</view>
-        </view>
-        <view class="divLine"></view>
-      </navigator>
 
     </view>
+
+    <view class='list'>
+        <view class="divLine"></view>
+        <navigator url='../selfRecommendationDetail/selfRecommendationDetail'>
+            <view class='item'>
+                <view>
+                    <view class='title'>初三·化学</view>
+                    <view class='info'>内容介绍</view>
+                    <view class='pubtime'>地点：上海市嘉定区</view>
+                </view>
+                <view class='salary'>150~200/h</view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
+
+        <navigator url="../selfRecommendationDetail/selfRecommendationDetail">
+            <view class='item'>
+                <view>
+                    <view class='title'>初三·化学</view>
+                    <view class='info'>内容介绍</view>
+                    <view class='pubtime'>地点：上海市嘉定区</view>
+                </view>
+                <view class='salary'>150~200/h</view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
+
+    </view>
+</block>
+<block wx:else>
+    <view>
+        <text>家长视角</text>
+    </view>
+</block>
