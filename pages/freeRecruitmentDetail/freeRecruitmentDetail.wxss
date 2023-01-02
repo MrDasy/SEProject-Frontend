@@ -36,6 +36,7 @@ map {
   color: #646464;
   font-size: 30rpx;
   font-weight: 40rpx;
+  margin-bottom: 5rpx;
 }
 
 .salary {

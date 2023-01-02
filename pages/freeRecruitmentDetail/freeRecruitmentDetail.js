@@ -3,7 +3,6 @@ const app = getApp()
 const citySelector = requirePlugin('citySelector');
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -20,7 +19,7 @@ Page({
 
     address:"",
     description:"",
-    parent_id:"",
+    parent_id:1,
     salary:"",
     subject:"",
     teaching_mode:"",
@@ -29,9 +28,8 @@ Page({
     // str="jpg|bmp|gif|ico|png", 
     // arr=str.split(","),
     location:[],
-
-
-
+    name:"",
+    phone_number:"",
   },
 
   /**
@@ -80,7 +78,6 @@ Page({
       success:res=>{
         var e=res.data.data
         console.log("招聘详情请求成功",e)
-      
         this.setData({
           'address':e.address,
           'description':e.description,
@@ -91,13 +88,29 @@ Page({
           'teaching_time':e.teaching_time,
           'location':e.address.split(","),
         })
-        console.log(this.data.location)
+        console.log("this.data.parent_id=",this.data.parent_id.toString())
       }
-      
     })
+    this.get_parentinfo()
   },
 
-
+  // 获取家长信息
+  get_parentinfo(){
+    wx.request({
+    //   url: 'http://121.36.225.155:9903/parents/'+this.data.parent_id.toString(),
+      url: 'http://121.36.225.155:9903/parents/1',
+      method:'Get',
+      success:res=>{
+        var e=res.data.data
+        console.log(this.data.parent_id.toString(),"家长信息请求成功",e)
+        this.setData({
+          'name':e.real_name,
+          'phone_number':e.phone_number
+        })
+        // console.log(this.data.name)
+      }
+    })
+  },
 
 
   /**

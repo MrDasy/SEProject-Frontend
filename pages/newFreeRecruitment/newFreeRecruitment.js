@@ -37,13 +37,18 @@ Page({
     price: '',
     priceError: false,
 
-    parent_id:"",
+    parent_id:0,
     address:"",
     subject:"",
     salary:"",
     description:"",
     teaching_mode:"",
     teaching_time:"",
+    message:"",
+
+    confirmBtn: { content: '确定', variant: 'base' },
+    dialogKey: '',
+    showTextAndTitle: false,
 
   },
 
@@ -55,6 +60,15 @@ Page({
   },
   handleBack() {
     console.log('go back');
+  },
+  showDialog(e) {
+    const { key } = e.currentTarget.dataset;
+    this.setData({ [key]: true, dialogKey: key });
+  },
+
+  closeDialog() {
+    const { dialogKey } = this.data;
+    this.setData({ [dialogKey]: false });
   },
   // 学科、授课方式选择
   onColumnChange(e) {
@@ -176,6 +190,42 @@ InputTime: function (e) {
   this.setData({ 'teaching_time': e.detail.value })
   console.log("teaching_time="+this.data.teaching_time)
 },
+
+
+new_recruitment(e){
+    wx.request({
+      url: 'http://121.36.225.155:9903/recruitment',
+      method:'Post',
+      data:{
+        "parent_id":app.globalData.user_id,
+        "address":this.data.address,
+        "subject":this.data.subject,
+        "salary":this.data.salary,
+        "description":this.data.description,
+        "teaching_mode":this.data.teaching_mode,
+        "teaching_time":this.data.teaching_time,
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success:res=>{
+        console.log("招聘信息提交成功",res.data)
+        console.log(this.data.address)
+        console.log(this.data.subject)
+        console.log(this.data.salary)
+        console.log(this.data.description)
+        console.log(this.data.teaching_mode)
+        console.log(this.data.teaching_time)
+        if (res.data.status == "success") {
+            this.setData({'message':"提交成功"}),
+            this.showDialog(e)
+          } else {
+            this.setData({'message':"提交失败"})
+            this.showDialog(e)
+          }
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

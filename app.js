@@ -8,8 +8,10 @@ App({
     },
 
     globalData: {
-        userInfo: null,
+        user_id: 1,
         id: "",
+        //location为具体地址
+        //address=location,latitude,longtitude
         location: "",
         address: "",
         isTutor: true, //是否是家教

@@ -50,3 +50,20 @@
 <view class="divLine"></view>
 <t-textarea label="输入授课时间" placeholder="例如：周日 18:00-20:00" maxcharacter="200" indicator bindchange='InputTime' />
 
+<view class="box">
+  <t-button 
+  theme="primary" 
+  size="large" 
+  data-key="showTextAndTitle"
+  bind:tap="new_recruitment" 
+  block>发布</t-button>
+
+  <t-dialog
+    visible="{{showTextAndTitle}}"
+    title="{{message}}"
+    confirm-btn="{{ confirmBtn }}"
+    bind:confirm="closeDialog"
+  />
+
+</view>
+

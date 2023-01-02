@@ -11,7 +11,7 @@
 </view>
 
 <!-- 发布人 -->
-<t-cell title="徐女士" description="{{description}}">
+<t-cell title="{{name}}" description="联系方式：{{phone_number}}">
   <view class="avatar" slot="left-icon">
     <t-image src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" width="60" height="60" shape="circle" />
   </view>
@@ -20,6 +20,7 @@
 <!-- 职位描述 -->
 <view class='item2'>
   <view class='title2'>职位描述</view>
+  <view class='titleDetail'>简介：{{description}}</view>
   <view class='titleDetail'>工作时间：{{teaching_time}}</view>
   <view class='titleDetail'>工作地址：{{location[0]}}</view>
   <map id="map" longitude="{{location[2]}}" latitude="{{location[1]}}" show-location="true" show-compass></map>
