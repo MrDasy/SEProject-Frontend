@@ -18,6 +18,12 @@
     </t-cell-group>
 </view>
 <view class="box">
+    <text>测试</text>
     <t-button class="testButton" theme="primary" size="large" disabled="{{didLogin}}" block bindtap="testLogin">{{loginPmt}}</t-button>
-    <t-button class="testButton" theme="primary" size="large" disabled="{{!didLogin}}" block bindtap="testProfile">获取用户信息测试</t-button>
+    <t-button class="testButton" theme="primary" size="large" disabled="{{!didLogin}}" block bindtap="testProfile">获取全部信息</t-button>
+    <text>测试信息：\n</text>
+    <text>是否登录：{{didLogin}}\n</text>
+    <text>用户ID：{{userId}}\n</text>
+    <text>SessionKey：{{sessionKey}}\n</text>
+    <text>详细信息：{{detailInfo}}</text>
 </view>
