@@ -50,6 +50,8 @@ Page({
       'filter':"none",
       'location':"",
       'subject':"",
+      isTutor: getApp().globalData.isTutor,
+
     })
     this.get_recruitment()
   },
@@ -143,6 +145,13 @@ Page({
       url: '../freeRecruitmentDetail/freeRecruitmentDetail'
     })
   },
+
+  new() {
+    console.log('new');
+    wx.navigateTo({
+        url: '../newFreeRecruitment/newFreeRecruitment'
+    })
+},
   
 
 

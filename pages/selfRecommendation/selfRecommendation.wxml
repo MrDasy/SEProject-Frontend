@@ -7,7 +7,6 @@
         <view>
             <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
         </view>
-
     </view>
 
     <view class='list'>
@@ -38,6 +37,7 @@
 
     </view>
 </block>
+
 <block wx:else>
     <view>
         <text>家长视角</text>

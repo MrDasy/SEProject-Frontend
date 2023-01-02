@@ -19,6 +19,18 @@ page {
   gap: 32rpx;
 }
 
+/* 发布 */
+.v1{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: #fff;
+    padding:10rpx;
+    font-size:35rpx;
+    font-weight:60rpx;
+  }
+  
+
 /* 分割线 */
 .divLine {
   background: #E0E3DA;
