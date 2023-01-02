@@ -19,5 +19,4 @@
 </view>
 <view class="box">
     <t-button theme="primary" size="large" block bindtap="testLogin">测试登录</t-button>
-    <text>返回结果：{{res}}</text>
 </view>
