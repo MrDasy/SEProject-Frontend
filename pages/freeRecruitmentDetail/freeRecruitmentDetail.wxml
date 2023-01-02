@@ -4,14 +4,14 @@
 <!-- 标题 -->
 <view class='item'>
   <view>
-    <view class='title'>初三·化学</view>
-    <view class='titleDetail'>授课方式：线上/线下</view>
+    <view class='title'>{{subject}}</view>
+    <view class='titleDetail'>授课方式：{{teaching_mode}}</view>
   </view>
-  <view class='salary'>200~250/h</view>
+  <view class='salary'>{{salary}}/h</view>
 </view>
 
 <!-- 发布人 -->
-<t-cell title="徐女士" description="上海市嘉定区">
+<t-cell title="徐女士" description="{{description}}">
   <view class="avatar" slot="left-icon">
     <t-image src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" width="60" height="60" shape="circle" />
   </view>
@@ -19,13 +19,13 @@
 
 <!-- 职位描述 -->
 <view class='item2'>
-
   <view class='title2'>职位描述</view>
-  <view class='titleDetail'>工作时间：周一 18:30-20:30</view>
-  <view class='titleDetail'>工作地址：</view>
-  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" show-compass></map>
+  <view class='titleDetail'>工作时间：{{teaching_time}}</view>
+  <view class='titleDetail'>工作地址：{{location[0]}}</view>
+  <map id="map" longitude="{{location[2]}}" latitude="{{location[1]}}" show-location="true" show-compass></map>
+
   <view class="buttonlist">
-    <t-button bindtap="moveTolocation" theme="primary" icon="location" shape="round">返回地址</t-button>
+    <t-button bindtap="moveTolocation" theme="primary" icon="location" shape="round">我的位置</t-button>
     <t-button bindtap="route" theme="primary" icon="pin" shape="round">路程规划</t-button>
   </view>
 

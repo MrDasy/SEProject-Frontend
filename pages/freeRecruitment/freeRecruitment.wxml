@@ -31,17 +31,17 @@
     <view class='list' wx:for='{{list}}' wx:key='index'>
       <view class="divLine"></view>
 
-      <navigator url='../freeRecruitmentDetail/freeRecruitmentDetail'>
-        <view class='item'>
+      <!-- <navigator url='../freeRecruitmentDetail/freeRecruitmentDetail'> -->
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
           <view class='itemleft'>
             <view class='title'>{{item.subject}}</view>
-            <view class='info'>内容介绍</view>
-            <view class='address'>地点：{{item.address}}</view>
+            <view class='info'>简介：{{item.description}}</view>
+            <view class='address'>授课时间：{{item.teaching_time}}</view>
           </view>
           <view class='salary'>{{item.salary}}/h</view>
         </view>
         <view class="divLine"></view>
-      </navigator>
+      <!-- </navigator> -->
 
     </view>
   </t-tab-panel>

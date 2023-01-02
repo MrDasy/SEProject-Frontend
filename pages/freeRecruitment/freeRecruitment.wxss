@@ -41,29 +41,32 @@ page {
   font-weight: 60rpx;
   margin-bottom: 5rpx;
   position: relative;
-  left: 10rpx;
-  top: 15rpx;
+  /* left: 10rpx;
+  top: 15rpx; */
 }
 
 .info {
-  font-size: 30rpx;
+  font-size: 27rpx;
   color: #777;
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   position: relative;
-  left: 10rpx;
-  top: 20rpx;
+  width:80%;
+  /* left: 10rpx;
+  top: 20rpx; */
 }
 
 .address {
-  font-size: 24rpx;
+  /* font-size: 24rpx;
   color: #4d4d4d;
-  padding-bottom: 14rpx;
-  padding-right: 40rpx;
   text-align: right;
   position: relative;
-  left: 10rpx;
-  top: 25rpx;
+  width:80%; */
+  font-size: 25rpx;
+  color: #4d4d4d;
+  padding-bottom: 5rpx;
+  position: relative;
+  width:80%;
 }
 
 .salary {

@@ -1,4 +1,5 @@
 // pages/freeRecruitmentDetail/freeRecruitmentDetail.js
+const app = getApp()
 const citySelector = requirePlugin('citySelector');
 
 Page({
@@ -7,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    longitude:116.40400,
-    latitude:39.92800,
+    // longitude:location[2],
+    // latitude:location[1],
     mapId: "map" ,
     confirmBtn: { content: '确定', variant: 'base' },
     dialogKey: '',
@@ -17,6 +18,19 @@ Page({
     showTextAndTitle: false,
     showMultiTextAndTitle: false,
 
+    address:"",
+    description:"",
+    parent_id:"",
+    salary:"",
+    subject:"",
+    teaching_mode:"",
+    teaching_time:"",
+
+    // str="jpg|bmp|gif|ico|png", 
+    // arr=str.split(","),
+    location:[],
+
+
 
   },
 
@@ -24,8 +38,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.get_recruitment()
   },
+
   handleBack() {
     console.log('go back');
   },
@@ -45,11 +60,44 @@ Page({
     const { key } = e.currentTarget.dataset;
     this.setData({ [key]: true, dialogKey: key });
   },
-
   closeDialog() {
     const { dialogKey } = this.data;
     this.setData({ [dialogKey]: false });
   },
+
+   // 获取招聘列表
+   get_recruitment(){
+    wx.request({
+      url: 'http://121.36.225.155:9903/recruitment',
+      data:{
+        // "filter":"recruitment_id",
+        "filter":"id",
+        "location":null,
+        "subject":null,
+        "id":app.globalData.id,
+      },
+      method:'Get',
+      success:res=>{
+        var e=res.data.data
+        console.log("招聘详情请求成功",e)
+      
+        this.setData({
+          'address':e.address,
+          'description':e.description,
+          'parent_id':e.parent_id,
+          'salary':e.salary,
+          'subject':e.subject,
+          'teaching_mode':e.teaching_mode,
+          'teaching_time':e.teaching_time,
+          'location':e.address.split(","),
+        })
+        console.log(this.data.location)
+      }
+      
+    })
+  },
+
+
 
 
   /**
