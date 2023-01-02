@@ -64,5 +64,9 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    testLogin: function() {
+        getApp().doLogin();
     }
 })
