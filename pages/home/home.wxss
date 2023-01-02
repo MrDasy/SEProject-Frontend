@@ -1,5 +1,13 @@
 /* pages/home/home.wxss */
 .custom-navbar {
-  --td-navbar-color: #266bdf;
-  --td-navbar-bg-color: #fff;
+    --td-navbar-color: #266bdf;
+    --td-navbar-bg-color: #fff;
+}
+
+.userinfo {
+    margin: 0 30rpx;
+}
+
+.group{
+    margin: 0 80rpx;
 }

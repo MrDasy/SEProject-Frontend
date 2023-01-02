@@ -1,3 +1,19 @@
 <!--pages/home/home.wxml-->
-<t-navbar class="custom-navbar"  title="个人中心" t-class-title="nav-title" />
+<t-navbar class="custom-navbar" title="个人中心" t-class-title="nav-title" />
 
+<view class="userinfo">
+    <t-cell-group class="group" theme="card">
+        <t-cell  title="{{userid}}" description="{{userinfo}}" image="{{image}}" hover />
+    </t-cell-group>
+    <t-cell-group class="group" theme="card">
+        <t-cell title="手机号绑定" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="身份认证" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="设置" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+    </t-cell-group>
+</view>
