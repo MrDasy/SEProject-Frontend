@@ -1,12 +1,12 @@
 // pages/message/message.js
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
 
-  },
+},
 
   /**
    * 生命周期函数--监听页面加载
@@ -14,6 +14,16 @@ Page({
   onLoad(options) {
 
   },
+  // 跳转到详情界面
+  detail:function(id) {
+    getApp().globalData.id=id.currentTarget.dataset.id,
+    // console.log("app.globalData.id="+app.globalData.id);
+    wx.navigateTo({
+      url: '../messageDetail/messageDetail'
+    })
+  },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

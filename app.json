@@ -6,6 +6,7 @@
     "pages/selfRecommendation/selfRecommendation",
     "pages/selfRecommendationDetail/selfRecommendationDetail",
     "pages/message/message",
+    "pages/messageDetail/messageDetail",
     "pages/home/home",
 
     "pages/newFreeRecruitment/newFreeRecruitment",
@@ -17,7 +18,8 @@
     "backgroundTextStyle": "light",
     "backgroundColor": "#e6e6e6",
     "navigationBarTitleText": "CravingStudy",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff"
   },
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
@@ -31,7 +33,10 @@
     "t-picker-item": "tdesign-miniprogram/picker/picker-item",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-input": "tdesign-miniprogram/input/input",
-    "t-textarea": "tdesign-miniprogram/textarea/textarea"
+    "t-textarea": "tdesign-miniprogram/textarea/textarea",
+    "t-side-bar": "tdesign-miniprogram/side-bar/side-bar",
+    "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item",
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
   },
 
   "sitemapLocation": "sitemap.json",
