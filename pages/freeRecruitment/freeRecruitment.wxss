@@ -78,7 +78,7 @@ page {
   color: #4d4d4d;
   padding-bottom: 5rpx;
   position: relative;
-  width:80%;
+  width:100%;
 }
 
 .salary {

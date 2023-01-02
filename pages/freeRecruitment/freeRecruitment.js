@@ -35,9 +35,12 @@ Page({
     ],
 
     filter:"none",
+    id:0,
     location:"",
     subject:"",
-    list:[]
+    list:[],
+    mylist:[]
+
   },
 
   /**
@@ -51,7 +54,6 @@ Page({
       'location':"",
       'subject':"",
       isTutor: getApp().globalData.isTutor,
-
     })
     this.get_recruitment()
   },
@@ -116,17 +118,26 @@ Page({
     this.setData({ 
       dateVisible: true ,
     });
-
   },
 
   // 获取招聘列表
   get_recruitment(){
+      if(app.globalData.isTutor==true){
+        console.log("大学生权限")
+      }else{
+        console.log("家长权限")
+        this.setData({
+            filter:"parent_id",
+            id:app.globalData.user_id,
+        })
+      }
     wx.request({
       url: 'http://121.36.225.155:9903/recruitment',
       data:{
         "filter":this.data.filter,
         "location":this.data.location,
         "subject":this.data.subject,
+        "id":this.data.id
       },
       method:'Get',
       success:res=>{
@@ -137,6 +148,8 @@ Page({
       }
     })
   },
+
+
 // 跳转到详情界面
   detail:function(id) {
     getApp().globalData.id=id.currentTarget.dataset.id,
@@ -166,6 +179,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+
 
   },
 

@@ -30,6 +30,7 @@
                         <view class='title'>{{item.subject}}</view>
                         <view class='info'>简介：{{item.description}}</view>
                         <view class='address'>授课时间：{{item.teaching_time}}</view>
+                        <view class='address'>授课方式：{{item.teaching_mode}}</view>
                     </view>
                     <view class='salary'>{{item.salary}}/h</view>
                 </view>
@@ -51,4 +52,18 @@
             <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
         </view>
     </view>
+
+    <view class='list' wx:for='{{list}}' wx:key='index'>
+                <view class="divLine"></view>
+                <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+                    <view class='itemleft'>
+                        <view class='title'>{{item.subject}}</view>
+                        <view class='info'>简介：{{item.description}}</view>
+                        <view class='address'>时间：{{item.teaching_time}}</view>
+                        <view class='address'>地址：{{item.address}}</view>
+                        <view class='address'>授课方式：{{item.teaching_mode}}</view>
+                    </view>
+                    <view class='salary'>{{item.salary}}/h</view>
+                </view>
+            </view>
 </block>
