@@ -70,8 +70,8 @@ Page({
     wx.request({
       url: 'http://121.36.225.155:9903/recruitment',
       data:{
-        // "filter":"recruitment_id",
-        "filter":"id",
+        "filter":"recruitment_id",
+        // "filter":"id",
         "location":null,
         "subject":null,
         "id":app.globalData.id,

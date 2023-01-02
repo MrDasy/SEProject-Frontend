@@ -1,4 +1,4 @@
-// pages/selfRecommendation/selfRecommendation.js
+// pages/newSelfRecommendation/newSelfRecommendation.js
 Page({
 
   /**
@@ -14,12 +14,11 @@ Page({
   onLoad(options) {
 
   },
-  new() {
-    console.log('new');
-    wx.navigateTo({
-      url: '../newSelfRecommendation/newSelfRecommendation'
-    })
+  handleBack() {
+    console.log('go back');
   },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

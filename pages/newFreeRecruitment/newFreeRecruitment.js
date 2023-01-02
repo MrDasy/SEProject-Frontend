@@ -1,13 +1,10 @@
-// pages/freeRecruitment/freeRecruitment.js
-const app = getApp()
+// pages/newFreeRecruitment/newFreeRecruitment.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    selectorVisible: false,
-    selectedProvince: null,
-    selectedCity: null,
     years: [
       { label: '一年级', value: '一年级' },
       { label: '二年级', value: '二年级' },
@@ -34,53 +31,18 @@ Page({
       { label: '生物', value: '生物' },
     ],
 
-    filter:"none",
-    location:"",
-    subject:"",
-    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.setData({
-      'selectedCity.name':"选择地点",
-      'dateText':"选择学科",
-      'filter':"none",
-      'location':"",
-      'subject':"",
-    })
-    this.get_recruitment()
-  },
-  onTabsChange(event) {
-    console.log(`Change tab, tab-panel value is ${event.detail.value}.`);
-  },
-  onTabsClick(event) {
-    console.log(`Click tab, tab-panel value is ${event.detail.value}.`);
-  },
-  // 显示城市筛选组件
-  showSelector() {
-    this.setData({
-      selectorVisible: true,
-    });
-  },
 
-  // 当用户选择了组件中的城市之后的回调函数
-  onSelectCity(e) {
-    console.log(e.detail);
-    const { province, city } = e.detail;
-    this.setData({
-      selectedProvince: province,
-      selectedCity: city,
-      "filter":"all",
-      "location":city.name,
-    });
-    console.log("location="+this.data.location);
-    this.get_recruitment()
   },
-
-// 学科选择
+  handleBack() {
+    console.log('go back');
+  },
+  // 学科选择
   onColumnChange(e) {
     console.log('picker pick:', e);
   },
@@ -116,35 +78,6 @@ Page({
     });
 
   },
-
-  // 获取招聘列表
-  get_recruitment(){
-    wx.request({
-      url: 'http://121.36.225.155:9903/recruitment',
-      data:{
-        "filter":this.data.filter,
-        "location":this.data.location,
-        "subject":this.data.subject,
-      },
-      method:'Get',
-      success:res=>{
-        console.log("招聘列表请求成功",res.data.data)
-        this.setData({
-          list:res.data.data
-        })
-      }
-    })
-  },
-// 跳转到详情界面
-  detail:function(id) {
-    getApp().globalData.id=id.currentTarget.dataset.id,
-    console.log("app.globalData.id="+app.globalData.id);
-    wx.navigateTo({
-      url: '../freeRecruitmentDetail/freeRecruitmentDetail'
-    })
-  },
-  
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

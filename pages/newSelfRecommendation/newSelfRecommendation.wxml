@@ -1,0 +1,2 @@
+<!--pages/newSelfRecommendation/newSelfRecommendation.wxml-->
+<t-navbar class="custom-navbar" title="发布自荐" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />

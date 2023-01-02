@@ -1,10 +1,13 @@
 {
   "pages": [
+    
     "pages/freeRecruitment/freeRecruitment",
     "pages/freeRecruitmentDetail/freeRecruitmentDetail",
+    "pages/newFreeRecruitment/newFreeRecruitment",
     "pages/routePlanning/routePlanning",
     "pages/selfRecommendation/selfRecommendation",
     "pages/selfRecommendationDetail/selfRecommendationDetail",
+    "pages/newSelfRecommendation/newSelfRecommendation",
     "pages/message/message",
     "pages/home/home"
 
@@ -25,7 +28,8 @@
     "t-button": "tdesign-miniprogram/button/button",
     "t-dialog": "tdesign-miniprogram/dialog/dialog",
     "t-picker": "tdesign-miniprogram/picker/picker",
-    "t-picker-item": "tdesign-miniprogram/picker/picker-item"
+    "t-picker-item": "tdesign-miniprogram/picker/picker-item",
+    "t-icon": "tdesign-miniprogram/icon/icon"
   },
 
   "sitemapLocation": "sitemap.json",
