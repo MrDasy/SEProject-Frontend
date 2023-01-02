@@ -11,3 +11,7 @@
 .group{
     margin: 0 80rpx;
 }
+
+.box {
+    margin: 0 32rpx;
+  }

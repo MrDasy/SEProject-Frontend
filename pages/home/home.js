@@ -8,6 +8,7 @@ Page({
         image: 'https://cdn-we-retail.ym.tencent.com/retail-ui/components-exp/avatar/avatar-v2/1.png',
         userid: '用户名',
         userinfo: '信息',
+        res: 'result',
     },
 
     /**
@@ -64,5 +65,9 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    testLogin: function() {
+        getApp().doLogin();
     }
 })

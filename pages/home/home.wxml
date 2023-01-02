@@ -3,7 +3,7 @@
 
 <view class="userinfo">
     <t-cell-group class="group" theme="card">
-        <t-cell  title="{{userid}}" description="{{userinfo}}" image="{{image}}" hover />
+        <t-cell title="{{userid}}" description="{{userinfo}}" image="{{image}}" hover />
     </t-cell-group>
     <t-cell-group class="group" theme="card">
         <t-cell title="手机号绑定" hover arrow>
@@ -16,4 +16,8 @@
             <t-icon name="setting" color="#0052d4" slot="left-icon" />
         </t-cell>
     </t-cell-group>
+</view>
+<view class="box">
+    <t-button theme="primary" size="large" block bindtap="testLogin">测试登录</t-button>
+    <text>返回结果：{{res}}</text>
 </view>
