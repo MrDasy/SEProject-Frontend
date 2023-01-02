@@ -59,7 +59,7 @@ Page({
   onTabsClick(event) {
     console.log(`Click tab, tab-panel value is ${event.detail.value}.`);
   },
-  // 显示组件
+  // 显示城市筛选组件
   showSelector() {
     this.setData({
       selectorVisible: true,
@@ -76,7 +76,7 @@ Page({
       "filter":"all",
       "location":city.name,
     });
-    console.log(this.data.location);
+    console.log("location="+this.data.location);
     this.get_recruitment()
   },
 
@@ -89,12 +89,16 @@ Page({
     const { key } = e?.currentTarget?.dataset;
     const { value } = e.detail;
 
-    console.log('picker change:', e.detail);
+    console.log('picker change:', e.detail.label[0]);
     this.setData({
       [`${key}Visible`]: false,
       [`${key}Value`]: value,
       [`${key}Text`]: value.join(' '),
+      "filter":"all",
+      "subject":e.detail.label[0]+e.detail.label[1],
     });
+    console.log("subject="+this.data.subject);
+    this.get_recruitment()
   },
 
   onPickerCancel(e) {
@@ -109,11 +113,8 @@ Page({
   onSeasonPicker() {
     this.setData({ 
       dateVisible: true ,
-      "filter":"all",
-      "location":city.name,
-      "subject":this.data.subject,
     });
-    console.log(subject);
+
   },
 
   // 获取招聘列表
