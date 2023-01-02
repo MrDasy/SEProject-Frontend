@@ -59,8 +59,8 @@
                     <view class='itemleft'>
                         <view class='title'>{{item.subject}}</view>
                         <view class='info'>简介：{{item.description}}</view>
-                        <view class='address'>时间：{{item.teaching_time}}</view>
-                        <view class='address'>地址：{{item.address}}</view>
+                        <view class='address'>授课时间：{{item.teaching_time}}</view>
+
                         <view class='address'>授课方式：{{item.teaching_mode}}</view>
                     </view>
                     <view class='salary'>{{item.salary}}/h</view>

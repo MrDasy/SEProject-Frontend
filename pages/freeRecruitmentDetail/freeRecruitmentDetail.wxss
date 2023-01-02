@@ -23,20 +23,23 @@ map {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+
+  position: relative;
 }
 
 .title {
   font-size: 50rpx;
   font-weight: 70rpx;
   margin-bottom: 20rpx;
+  position: relative;
 }
 
 .titleDetail {
   color: #646464;
   font-size: 30rpx;
   font-weight: 40rpx;
-  margin-bottom: 5rpx;
+  margin-bottom: 8rpx;
+  position: relative;
 }
 
 .salary {
@@ -44,9 +47,10 @@ map {
   font-size: 40rpx;
   font-weight: 200rpx;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-right: 35rpx;
+  top: 40%;
 }
 
 .avatar {
