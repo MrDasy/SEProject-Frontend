@@ -185,7 +185,7 @@ InputMode: function (e) {
   console.log("teaching_mode="+this.data.teaching_mode)
 },
 
-//输入授课方式
+//输入授课时间
 InputTime: function (e) {
   this.setData({ 'teaching_time': e.detail.value })
   console.log("teaching_time="+this.data.teaching_time)

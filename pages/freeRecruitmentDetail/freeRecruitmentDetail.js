@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isTutor: getApp().globalData.isTutor,
     // longitude:location[2],
     // latitude:location[1],
     mapId: "map" ,

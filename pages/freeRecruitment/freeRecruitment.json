@@ -1,5 +1,6 @@
 {
-  "usingComponents": {
-    "selector-component": "plugin://citySelector/selector-component"
-  }
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "selector-component": "plugin://citySelector/selector-component"
+    }
 }

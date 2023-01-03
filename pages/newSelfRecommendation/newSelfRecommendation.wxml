@@ -1,2 +1,96 @@
 <!--pages/newSelfRecommendation/newSelfRecommendation.wxml-->
 <t-navbar class="custom-navbar" title="发布自荐" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
+
+<view class="divLine"></view>
+<!-- 学科选择器 -->
+<t-cell class="block" title="选择年级、学科" arrow hover note="{{dateText}}" bind:click="onSeasonPicker" />
+<t-picker 
+  visible="{{dateVisible}}" 
+  value="{{dateValue}}" 
+  data-key="date" 
+  title="选择学科" 
+  cancelBtn="取消" 
+  confirmBtn="确认" 
+  bindchange="onPickerChange" 
+  bindpick="onColumnChange" 
+  bindcancel="onPickerCancel">
+    <t-picker-item options="{{years}}"></t-picker-item>
+    <t-picker-item options="{{seasons}}"></t-picker-item>
+</t-picker>
+
+
+<!-- 选择地址 -->
+<view class="divLine"></view>
+<t-cell title="选择地址" description="{{location}}" bindtap="selectLocation" arrow />
+
+
+
+
+<!-- 简介 -->
+<view class="divLine"></view>
+<t-textarea label="填写简介" placeholder="请输入简介,如：教学经验（不超过100个字符，一个汉字表示两个字符）" maxcharacter="200" indicator bindchange='InputDecrip' />
+
+<!-- 授课方式 -->
+<view class="divLine"></view>
+<t-textarea label="输入理想授课方式" placeholder="例如：线下/线上/线下线上均可，不超过20个字符" maxcharacter="40" indicator bindchange='InputMode' />
+
+<!-- 授课时间 -->
+<view class="divLine"></view>
+<t-textarea label="输入授课时间" placeholder="例如：周日 18:00-20:00" maxcharacter="200" indicator bindchange='InputTime' />
+
+<view class="main">
+    <view class="playerInfo">
+        <view class="video" wx:if="{{clickFlag}}">
+            <image class="videoContent" wx:if="{{poster}}" src="{{poster}}" mode="aspectFill" bindtap="chooseVideo"/>
+            <view class="videoContent"  wx:else bindtap="chooseVideo" >
+                <image class="playImg" src="../images/uploadVideo.png" mode="aspectFill"/>
+            </view>
+        </view>
+        <view class="video" wx:else>
+            <image class="videoContent" wx:if="{{poster}}" src="{{poster}}" mode="aspectFill"/>
+            <view class="videoContent"  wx:else>
+                <image class="playImg" src="../images/uploadVideo.png" mode="aspectFill"/>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="footerbtn">
+        <button type="default" style="width:40%;" bindtap = "chooseVideo" wx:if="{{clickFlag}}">上传视频</button>
+        <button type="default" style="width:40%;color:#cccccc;" wx:else>上传视频</button>
+        <button type="primary" style="width:40%;" bindtap = "saveVideo">保存</button>
+    </view> -->
+    <view class="group">
+        <t-button theme="light" block size="large" bindtap = "chooseVideo" wx:if="{{clickFlag}}">上传视频</t-button>
+        <t-button theme="light" block size="large" wx:else>上传视频</t-button>
+        <t-button theme="primary" block size="large" bindtap = "saveVideo">保存</t-button>
+    </view>
+
+    <view class="videoUrlResult" wx:if="{{videoUrl}}" >
+        <view class="title">上传的视频：</view>
+        <!--autoplay="true" 视频自动播放-->
+        <video class="videoContent" style="width: 90%;margin-left: 5%;margin-top: 20rpx;" 
+               show-center-play-btn="true" src="{{videoUrl}}" object-fit="fill" 
+               bindfullscreenchange="fullscreenchange">
+        </video>
+    </view>
+</view>
+
+
+<view class="box">
+  <t-button 
+  theme="primary" 
+  size="large" 
+  data-key="showTextAndTitle"
+  bind:tap="new_recruitment" 
+  block>发布</t-button>
+
+  <t-dialog
+    visible="{{showTextAndTitle}}"
+    title="{{message}}"
+    confirm-btn="{{ confirmBtn }}"
+    bind:confirm="closeDialog"
+  />
+
+</view>
+
+
+

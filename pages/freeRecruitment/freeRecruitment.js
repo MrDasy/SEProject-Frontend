@@ -179,6 +179,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+
+  },
+
+  //下拉刷新
+  onRefresh:function(){
+    //导航条加载动画
+    wx.showNavigationBarLoading()
+    //loading 提示框
+    wx.showLoading({
+      title: 'Loading...',
+    })
+    console.log("下拉刷新啦");
+    setTimeout(function () {
+      wx.hideLoading();
+      wx.hideNavigationBarLoading();
+      //停止下拉刷新
+      wx.stopPullDownRefresh();
+    }, 400)
     this.setData({
         'selectedCity.name':"选择地点",
         'dateText':"选择学科",
@@ -188,9 +206,8 @@ Page({
         isTutor: getApp().globalData.isTutor,
       })
       this.get_recruitment()
-
-
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -209,8 +226,8 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh() {
-
+  onPullDownRefresh:function(){
+    this.onRefresh();
   },
 
   /**

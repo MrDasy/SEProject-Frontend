@@ -44,6 +44,7 @@
     >开始交流</t-button>
   </view>
 </block>
+
 <block wx:else>
     <view class="box">
   <t-button

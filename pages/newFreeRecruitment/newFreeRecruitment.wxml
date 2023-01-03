@@ -44,7 +44,7 @@
 
 <!-- 授课方式 -->
 <view class="divLine"></view>
-<t-textarea label="输入理想授课方式" placeholder="例如：线下/线上/线下线上均可，不超过100个字符" maxcharacter="200" indicator bindchange='InputMode' />
+<t-textarea label="输入理想授课方式" placeholder="例如：线下/线上/线下线上均可，不超过20个字符" maxcharacter="40" indicator bindchange='InputMode' />
 
 <!-- 授课时间 -->
 <view class="divLine"></view>

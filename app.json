@@ -23,6 +23,7 @@
     "navigationBarTitleText": "CravingStudy",
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#fff"
+
   },
   "usingComponents": {
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
