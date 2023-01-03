@@ -179,6 +179,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    this.setData({
+        'selectedCity.name':"选择地点",
+        'dateText':"选择学科",
+        'filter':"none",
+        'location':"",
+        'subject':"",
+        isTutor: getApp().globalData.isTutor,
+      })
+      this.get_recruitment()
 
 
   },

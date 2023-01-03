@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/hello/hello",
     "pages/freeRecruitment/freeRecruitment",
     "pages/freeRecruitmentDetail/freeRecruitmentDetail",
     "pages/routePlanning/routePlanning",
@@ -10,7 +11,9 @@
     "pages/home/home",
 
     "pages/newFreeRecruitment/newFreeRecruitment",
-    "pages/newSelfRecommendation/newSelfRecommendation"
+    "pages/newSelfRecommendation/newSelfRecommendation",
+
+    "pages/signUp/signUp"
 
   ],
   "window": {
