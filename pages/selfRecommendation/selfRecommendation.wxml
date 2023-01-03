@@ -15,10 +15,9 @@
             <view class='item'>
                 <view>
                     <view class='title'>初三·化学</view>
-                    <view class='info'>内容介绍</view>
+                    <view class='info'>授课方式：线上线下均可</view>
                     <view class='pubtime'>地点：上海市嘉定区</view>
                 </view>
-                <view class='salary'>150~200/h</view>
             </view>
             <view class="divLine"></view>
         </navigator>
@@ -26,11 +25,10 @@
         <navigator url="../selfRecommendationDetail/selfRecommendationDetail">
             <view class='item'>
                 <view>
-                    <view class='title'>初三·化学</view>
-                    <view class='info'>内容介绍</view>
+                    <view class='title'>小学·英语</view>
+                    <view class='info'>授课方式：线上线下均可</view>
                     <view class='pubtime'>地点：上海市嘉定区</view>
                 </view>
-                <view class='salary'>150~200/h</view>
             </view>
             <view class="divLine"></view>
         </navigator>
