@@ -1,33 +1,43 @@
 /* pages/hello/hello.wxss */
 page {
-    background-color: -webkit-linear-gradient(top,rgb(244,157,4),#FACF94,white);
-  }
+    background-color: -webkit-linear-gradient(top, rgb(244, 157, 4), #FACF94, white);
+}
+
 .anim-pic {
     width: 400rpx;
     height: 400rpx;
     margin: 30rpx auto;
-  }
-  .anim-pic image{
+}
+
+.anim-pic image {
     width: 400rpx;
     height: 400rpx;
-  }
-  .anim-btns button{
+}
+
+.anim-btns button {
     border: 1px solid orange;
-  }
-  .hello{
+}
+
+.hello {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 400px
-  }
-  .helloimage{
+}
+
+.helloimage {
     height: 350rpx
-  }
-  .group {
+}
+
+.group {
     margin: 30rpx;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32rpx;
-  }
+}
+
+.ctn {
+    margin: 0;
+}

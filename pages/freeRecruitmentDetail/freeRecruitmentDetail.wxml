@@ -3,72 +3,43 @@
 
 <!-- 标题 -->
 <view class='item'>
-  <view>
-    <view class='title'>{{subject}}</view>
-    <view class='titleDetail'>授课方式：{{teaching_mode}}</view>
-  </view>
-  <view class='salary'>{{salary}}/h</view>
+    <view>
+        <view class='title'>{{subject}}</view>
+        <view class='titleDetail'>授课方式：{{teaching_mode}}</view>
+    </view>
+    <view class='salary'>{{salary}}/h</view>
 </view>
 
 <!-- 发布人 -->
 <t-cell title="{{name}}" description="联系方式：{{phone_number}}">
-  <view class="avatar" slot="left-icon">
-    <t-image src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" width="60" height="60" shape="circle" />
-  </view>
+    <view class="avatar" slot="left-icon">
+        <t-image src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" width="60" height="60" shape="circle" />
+    </view>
 </t-cell>
 
 <!-- 职位描述 -->
 <view class='item2'>
-  <view class='title2'>职位描述</view>
-  <view class='titleDetail'>简介：{{description}}</view>
-  <view class='titleDetail'>工作时间：{{teaching_time}}</view>
-  <view class='titleDetail'>工作地址：{{location[0]}}</view>
-  <map id="map" longitude="{{location[2]}}" latitude="{{location[1]}}" show-location="true" show-compass></map>
+    <view class='title2'>职位描述</view>
+    <view class='titleDetail'>简介：{{description}}</view>
+    <view class='titleDetail'>工作时间：{{teaching_time}}</view>
+    <view class='titleDetail'>工作地址：{{location[0]}}</view>
+    <map id="map" longitude="{{location[2]}}" latitude="{{location[1]}}" show-location="true" show-compass></map>
 
-  <block wx:if="{{isTutor}}">
-  <view class="buttonlist">
-    <t-button bindtap="moveTolocation" theme="primary" icon="location" shape="round">我的位置</t-button>
-    <t-button bindtap="route" theme="primary" icon="pin" shape="round">路程规划</t-button>
-  </view>
+    <block wx:if="{{isTutor}}">
+        <view class="buttonlist">
+            <t-button bindtap="moveTolocation" theme="primary" icon="location" shape="round">我的位置</t-button>
+            <t-button bindtap="route" theme="primary" icon="pin" shape="round">路程规划</t-button>
+        </view>
+        <view class="box">
+            <t-button t-class="wrapper" theme="primary" icon="tips" size="large" variant="outline" data-key="showContentOnly" bind:tap="showDialog" block>开始交流</t-button>
+        </view>
+    </block>
 
-  <view class="box">
-  <t-button
-    t-class="wrapper"
-    theme="primary"
-    icon="tips" 
-    size="large"
-    variant="outline"
-    data-key="showContentOnly"
-    bind:tap="showDialog"
-    block
-    >开始交流</t-button>
-  </view>
-</block>
+    <block wx:else>
+        <view class="box">
+            <t-button t-class="wrapper" theme="primary" icon="delete" size="large" data-key="showContentOnly" bind:tap="showDialog" block>删除招聘</t-button>
+        </view>
+    </block>
 
-<block wx:else>
-    <view class="box">
-  <t-button
-    t-class="wrapper"
-    theme="primary"
-    icon="delete" 
-    size="large"
-    data-key="showContentOnly"
-    bind:tap="showDialog"
-    block
-    >删除招聘</t-button>
-  </view>
-
-
-
-
-</block>
-
-  <t-dialog
-    visible="{{showContentOnly}}"
-    title="是否跳转到一对一交流界面？"
-    confirm-btn="{{ confirmBtn }}"
-    cancel-btn="取消"
-    bind:confirm="closeDialog"
-    bind:cancel="closeDialog"
-  />
+    <t-dialog visible="{{showContentOnly}}" title="现在开始交流？" confirm-btn="{{ confirmBtn }}" cancel-btn="取消" bind:confirm="closeDialog" bind:cancel="closeDialog" />
 </view>

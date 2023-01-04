@@ -1,12 +1,14 @@
 <!--pages/hello/hello.wxml-->
 
-<view class="anim-pic">
-    <image src="../../images/logo.png" animation="{{animated}}"></image>
-</view>
-<view class="hello">
-    <image class="helloimage" animation="{{animated1}}" src="../../images/hello.png"></image>
-</view>
-<view class="group">
-  <t-button bindtap="signin" theme="primary" block size="large">登录</t-button>
-  <t-button bindtap="signup" theme="light" block size="large">注册</t-button>
+<view class="ctn">
+    <view class="anim-pic">
+        <image src="../../images/logo.png" animation="{{animated}}"></image>
+    </view>
+    <view class="hello">
+        <image class="helloimage" animation="{{animated1}}" src="../../images/hello.png"></image>
+    </view>
+    <view class="group">
+    <t-button bindtap="signin" theme="primary" block size="large">登录</t-button>
+    <t-button bindtap="signup" theme="light" block size="large">注册</t-button>
+    </view>
 </view>
