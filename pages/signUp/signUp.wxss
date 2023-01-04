@@ -1,0 +1,50 @@
+/* pages/signUp/signUp.wxss */
+.custom-navbar {
+    --td-navbar-color: #1682bd;
+    --td-navbar-bg-color: #fff;
+  }
+
+  .body-wrapper{
+    margin:30rpx;
+    display: flex;
+
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+  
+  }
+  .body{
+    display:flex;
+    margin-top: 200rpx;
+    justify-content: space-around;
+    /* background:rgba(186,206,193, 0.849); */
+    box-shadow: rgb(201, 201, 201) 0 0 10rpx;
+    width:400rpx;
+    height:200rpx;
+    border-radius: 40rpx;
+    padding:10rpx;
+  }
+  .body_logo{
+    display:flex;
+    align-items: center;
+  }
+  .body_logo image{
+    width:120rpx;
+    height:110rpx;
+  }
+  .body_text{
+    display:flex;
+    font-size: 43rpx;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .body_text1{
+    display:flex;
+    font-size: 31rpx;
+    flex-direction: column;
+    justify-content: space-around;
+  }

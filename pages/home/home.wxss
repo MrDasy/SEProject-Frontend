@@ -1,0 +1,13 @@
+/* pages/home/home.wxss */
+.custom-navbar {
+    --td-navbar-color: #266bdf;
+    --td-navbar-bg-color: #fff;
+}
+
+.box {
+    margin: 0 32rpx;
+}
+
+.testButton {
+    margin: 10rpx;
+}

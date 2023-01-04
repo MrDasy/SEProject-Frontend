@@ -1,0 +1,86 @@
+/* pages/freeRecruitmentDetail/freeRecruitmentDetail.wxss */
+page {
+  background-color: #e7e7e75d;
+}
+
+map {
+  height: 30vh;
+  width: 100%;
+  border-radius: 40rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.custom-navbar {
+  --td-navbar-color: #266bdf;
+  --td-navbar-bg-color: #fff;
+}
+
+.item {
+  background-color: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.title {
+  font-size: 50rpx;
+  font-weight: 70rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.titleDetail {
+  color: #646464;
+  font-size: 30rpx;
+  font-weight: 40rpx;
+  margin-bottom: 8rpx;
+  position: relative;
+}
+
+.salary {
+  color: #266bdf;
+  font-size: 40rpx;
+  font-weight: 200rpx;
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 35rpx;
+  top: 40%;
+}
+
+.avatar {
+  overflow: hidden;
+}
+
+.item2 {
+  background-color: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.title2 {
+  font-size: 40rpx;
+  font-weight: 70rpx;
+  margin-bottom: 20rpx;
+}
+
+.buttonlist{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+
+
+.box {
+  margin:  32rpx;
+}

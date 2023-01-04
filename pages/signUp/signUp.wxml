@@ -1,0 +1,19 @@
+<!--pages/signUp/signUp.wxml-->
+<t-navbar class="custom-navbar" title="注册" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
+
+<view class="body-wrapper">
+    <view class="body">
+      <view class="body_logo">
+        <image src="../../images/tutor.png"></image>
+      </view>
+      <view class="body_text">我是教师</view>
+    </view>
+
+    <view class="body">
+      <view class="body_logo">
+        <image src="../../images/parent.png"></image>
+      </view>
+      <view class="body_text">我是家长</view>
+    </view>
+
+</view>

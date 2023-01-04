@@ -1,0 +1,3 @@
+<!--pages/messageDetail/messageDetail.wxml-->
+<t-navbar class="custom-navbar" title="消息详情" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
+

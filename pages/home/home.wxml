@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<t-navbar class="custom-navbar" title="个人中心" t-class-title="nav-title" />
+
+<view class="userinfo">
+    <t-cell-group class="group" theme="card">
+        <t-cell title="{{userName}}" description="{{userInfo}}" image="{{userAvatar}}" hover />
+    </t-cell-group>
+    <t-cell-group class="group" theme="card">
+        <t-cell title="手机号绑定" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="身份认证" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="学籍认证" wx:if="{{isTutor}}" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="偏好管理" wx:if="{{isTutor}}" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+        <t-cell title="设置" hover arrow>
+            <t-icon name="setting" color="#0052d4" slot="left-icon" />
+        </t-cell>
+    </t-cell-group>
+</view>
+<view class="box">
+    <t-button class="testButton" theme="primary" size="large" bindtap="showDialogue" block>切换为{{isTutor ? "家长" : "家教"}}身份</t-button>
+    <t-dialog visible="{{popShow}}" title="确认切换？" content="您即将切换身份" confirm-btn="确认" cancel-btn="取消" bind:confirm="switchIdentity" bind:cancel="hideDialogue" />
+</view>

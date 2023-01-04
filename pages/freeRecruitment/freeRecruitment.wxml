@@ -1,0 +1,69 @@
+<!--pages/freeRecruitment/freeRecruitment.wxml-->
+<t-navbar class="custom-navbar" title="自由招聘" t-class-title="nav-title" />
+
+<block wx:if="{{isTutor}}">
+
+    <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+        <t-tab-panel label="列表" value="0">
+
+            <view class="group">
+                <t-button bindtap="showSelector" theme="light" icon="location" block shape="round">{{selectedCity.name}}</t-button>
+                <t-button bindtap="onSeasonPicker" theme="light" icon="pin" block shape="round">{{dateText}}</t-button>
+            </view>
+
+            <!-- 地区选择器 -->
+            <selector-component show="{{selectorVisible}}" key="ZA6BZ-6OKER-XXBWY-WXBEQ-PY3T6-XPFCM" referer="CravingStudy" bindselect="onSelectCity">
+            </selector-component>
+
+            <!-- 学科选择器 -->
+            <t-picker visible="{{dateVisible}}" value="{{dateValue}}" data-key="date" title="选择学科" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange" bindpick="onColumnChange" bindcancel="onPickerCancel">
+                <t-picker-item options="{{years}}"></t-picker-item>
+                <t-picker-item options="{{seasons}}"></t-picker-item>
+            </t-picker>
+
+            <view class='list' wx:for='{{list}}' wx:key='index'>
+                <view class="divLine"></view>
+
+                <!-- <navigator url='../freeRecruitmentDetail/freeRecruitmentDetail'> -->
+                <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+                    <view class='itemleft'>
+                        <view class='title'>{{item.subject}}</view>
+                        <view class='info'>简介：{{item.description}}</view>
+                        <view class='address'>授课时间：{{item.teaching_time}}</view>
+                        <view class='address'>授课方式：{{item.teaching_mode}}</view>
+                    </view>
+                    <view class='salary'>{{item.salary}}/h</view>
+                </view>
+                <view class="divLine"></view>
+                <!-- </navigator> -->
+
+            </view>
+        </t-tab-panel>
+
+        <t-tab-panel label="地图" value="1">标签二内容</t-tab-panel>
+
+    </t-tabs>
+</block>
+
+<block wx:else>
+    <view class='v1'>
+        <view>我的发布</view>
+        <view>
+            <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
+        </view>
+    </view>
+
+    <view class='list' wx:for='{{list}}' wx:key='index'>
+                <view class="divLine"></view>
+                <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+                    <view class='itemleft'>
+                        <view class='title'>{{item.subject}}</view>
+                        <view class='info'>简介：{{item.description}}</view>
+                        <view class='address'>授课时间：{{item.teaching_time}}</view>
+
+                        <view class='address'>授课方式：{{item.teaching_mode}}</view>
+                    </view>
+                    <view class='salary'>{{item.salary}}/h</view>
+                </view>
+            </view>
+</block>

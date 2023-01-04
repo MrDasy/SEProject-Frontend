@@ -1,0 +1,69 @@
+<!--pages/newFreeRecruitment/newFreeRecruitment.wxml-->
+<t-navbar class="custom-navbar" title="发布招聘" t-class-title="nav-title" left-arrow bind:go-back="handleBack" />
+
+<view class="divLine"></view>
+<!-- 学科选择器 -->
+<t-cell class="block" title="选择年级、学科" arrow hover note="{{dateText}}" bind:click="onSeasonPicker" />
+<t-picker 
+  visible="{{dateVisible}}" 
+  value="{{dateValue}}" 
+  data-key="date" 
+  title="选择学科" 
+  cancelBtn="取消" 
+  confirmBtn="确认" 
+  bindchange="onPickerChange" 
+  bindpick="onColumnChange" 
+  bindcancel="onPickerCancel">
+    <t-picker-item options="{{years}}"></t-picker-item>
+    <t-picker-item options="{{seasons}}"></t-picker-item>
+</t-picker>
+
+
+<!-- 选择地址 -->
+<view class="divLine"></view>
+<t-cell title="选择地址" description="{{location}}" bindtap="selectLocation" arrow />
+
+<!-- 输入薪资 -->
+<view class="divLine"></view>
+<t-input
+  label="输入薪资"
+  placeholder="0.00"
+  suffix="元/小时"
+  align="right"
+  bindchange="onPriceInput"
+  value="{{price}}"
+  tips="{{priceError ? '请输入正确的薪资' : ''}}"
+  t-class-tips="tips"
+/>
+
+
+
+<!-- 简介 -->
+<view class="divLine"></view>
+<t-textarea label="填写简介" placeholder="请输入简介,如：孩子当前学习情况，想要达到的效果（不超过100个字符，一个汉字表示两个字符）" maxcharacter="200" indicator bindchange='InputDecrip' />
+
+<!-- 授课方式 -->
+<view class="divLine"></view>
+<t-textarea label="输入理想授课方式" placeholder="例如：线下/线上/线下线上均可，不超过20个字符" maxcharacter="40" indicator bindchange='InputMode' />
+
+<!-- 授课时间 -->
+<view class="divLine"></view>
+<t-textarea label="输入授课时间" placeholder="例如：周日 18:00-20:00" maxcharacter="200" indicator bindchange='InputTime' />
+
+<view class="box">
+  <t-button 
+  theme="primary" 
+  size="large" 
+  data-key="showTextAndTitle"
+  bind:tap="new_recruitment" 
+  block>发布</t-button>
+
+  <t-dialog
+    visible="{{showTextAndTitle}}"
+    title="{{message}}"
+    confirm-btn="{{ confirmBtn }}"
+    bind:confirm="closeDialog"
+  />
+
+</view>
+

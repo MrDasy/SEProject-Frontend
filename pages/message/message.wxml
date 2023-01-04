@@ -1,0 +1,29 @@
+<!--pages/message/message.wxml-->
+<t-navbar class="custom-navbar" title="消息" t-class-title="nav-title" />
+
+<block wx:if="{{isTutor}}">
+    <view class='list'>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="李烁民" description="这周六下午上课吗？" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="洪知袖" description="老师你上次不值得作业我不太会..." align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <view class='list'>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="曹孟德" description="董爸爸您好..." align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="关云长" description="您好！这周的课可能需要换到线上进行" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="刘玄德" description="" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+        <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
+            <t-cell title="张翼德" description="" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        </view>
+    </view>
+</block>
