@@ -14,7 +14,7 @@ App({
         //address=location,latitude,longtitude
         location: "",
         address: "",
-        isTutor: true, //是否是家教
+        isTutor: false, //是否是家教
         didLogin: false,
     },
 })

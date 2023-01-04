@@ -56,4 +56,10 @@ page{
   padding-right: 40rpx;
   text-align:right;
 }
+.group {
+    margin: 10rpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32rpx;
+  }
 

@@ -3,10 +3,9 @@
 
 <view class='list'>
     <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
-        <t-cell title="徐茗好" description="一段很长很长的内容文字" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        <t-cell title="李烁民" description="这周六下午上课吗？" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
     </view>
-
     <view class='item' data-id='{{item.recruitment_id}}' bindtap="detail">
-        <t-cell title="洪知袖" description="一段很长很长的内容文字" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
+        <t-cell title="洪知袖" description="老师你上次不值得作业我不太会" align="top" image="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" />
     </view>
 </view>

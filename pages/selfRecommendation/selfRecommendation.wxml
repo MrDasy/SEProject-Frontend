@@ -37,7 +37,54 @@
 </block>
 
 <block wx:else>
-    <view>
-        <text>家长视角</text>
+    <view class="group">
+        <t-button bindtap="showSelector" theme="light" icon="location" block shape="round">选择城市{{selectedCity.name}}</t-button>
+        <t-button bindtap="onSeasonPicker" theme="light" icon="pin" block shape="round">选择学科{{dateText}}</t-button>
+    </view>
+    <view class='list'>
+        <view class="divLine"></view>
+        <navigator url='../selfRecommendationDetail/selfRecommendationDetail'>
+            <view class='item'>
+                <view>
+                    <view class='title'>初三·化学</view>
+                    <view class='info'>授课方式：线上线下均可</view>
+                    <view class='pubtime'>地点：上海市嘉定区</view>
+                </view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
+
+        <navigator url="../selfRecommendationDetail/selfRecommendationDetail">
+            <view class='item'>
+                <view>
+                    <view class='title'>高中·生物</view>
+                    <view class='info'>授课方式：线上</view>
+                    <view class='pubtime'>地点：北京市海淀区</view>
+                </view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
+
+        <navigator url="../selfRecommendationDetail/selfRecommendationDetail">
+            <view class='item'>
+                <view>
+                    <view class='title'>小学·英语</view>
+                    <view class='info'>授课方式：线上线下均可</view>
+                    <view class='pubtime'>地点：上海市嘉定区</view>
+                </view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
+
+        <navigator url="../selfRecommendationDetail/selfRecommendationDetail">
+            <view class='item'>
+                <view>
+                    <view class='title'>所有年级·数学</view>
+                    <view class='info'>授课方式：线下</view>
+                    <view class='pubtime'>地点：江西省南昌市</view>
+                </view>
+            </view>
+            <view class="divLine"></view>
+        </navigator>
     </view>
 </block>
