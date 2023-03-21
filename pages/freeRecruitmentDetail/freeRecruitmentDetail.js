@@ -46,12 +46,20 @@ Page({
     handleBack() {
         console.log('go back');
     },
-    
+
     route() {
         console.log('route');
+        let plugin = requirePlugin('routePlan');
+        let key = 'ZA6BZ-6OKER-XXBWY-WXBEQ-PY3T6-XPFCM'; //使用在腾讯位置服务申请的key
+        let referer = 'CravingStudy'; //调用插件的app的名称
+        let endPoint = JSON.stringify({ //终点
+            'name': this.data.location[0],
+            'latitude': this.data.location[1],
+            'longitude': this.data.location[2]
+        });
         wx.navigateTo({
-            url: '../routePlanning/routePlanning'
-        })
+            url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+        });
     },
 
     moveTolocation: function () {
@@ -104,6 +112,7 @@ Page({
                     'teaching_time': e.teaching_time,
                     'location': e.address.split(","),
                 })
+                console.log(this.data.location);
                 console.log("this.data.parent_id=", this.data.parent_id.toString())
             }
         })

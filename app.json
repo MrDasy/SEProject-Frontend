@@ -3,16 +3,13 @@
     "pages/hello/hello",
     "pages/freeRecruitment/freeRecruitment",
     "pages/freeRecruitmentDetail/freeRecruitmentDetail",
-    "pages/routePlanning/routePlanning",
     "pages/selfRecommendation/selfRecommendation",
     "pages/selfRecommendationDetail/selfRecommendationDetail",
     "pages/message/message",
     "pages/messageDetail/messageDetail",
     "pages/home/home",
-
     "pages/newFreeRecruitment/newFreeRecruitment",
     "pages/newSelfRecommendation/newSelfRecommendation",
-
     "pages/signUp/signUp"
 
   ],
@@ -83,7 +80,11 @@
     "citySelector": {
       "version": "1.0.2",
       "provider": "wx63ffb7b7894e99ae"
-    }
+    },
+    "routePlan": {
+        "version": "1.0.18",
+        "provider": "wx50b5593e81dd937a"
+        }
   },
   "permission": {
     "scope.userLocation": {

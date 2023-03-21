@@ -1,11 +1,12 @@
 // app.js
 const local_url = "http://localhost:9903"
 const remote_url = "http://121.36.225.155:9903"
-const local_debug = true
+const local_debug = false
 
 function getUrl() {
     return local_debug ? local_url : remote_url
 }
+
 App({
     onLaunch() {
         // 展示本地存储能力
@@ -83,3 +84,4 @@ App({
         }
     },
 })
+
