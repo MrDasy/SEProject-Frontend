@@ -1,0 +1,15 @@
+<!--pages/uploadTest/uploadTest.wxml-->
+<t-navbar class="custom-navbar" title="视频测试" t-class-title="nav-title" />
+<!-- <view class='v1'>
+    <view></view>
+    <view>
+        <t-icon name="add-circle" size="48rpx" data-name="add-circle" bind:click="new" />
+    </view>
+</view> -->
+<view class="video-container">
+    <video class="video-view" src="{{videoUrl}}"></video>
+</view>
+ <view class="button-container">
+    <t-button bindtap="chooseVideo" class="button-test" theme="primary" size="large" block>测试上传</t-button>
+</view>
+上传进度: <text>{{imageProgress.progress}}\n\n</text>

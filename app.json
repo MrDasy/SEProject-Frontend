@@ -1,95 +1,89 @@
 {
-  "pages": [
-    "pages/hello/hello",
-    "pages/freeRecruitment/freeRecruitment",
-    "pages/freeRecruitmentDetail/freeRecruitmentDetail",
-    "pages/selfRecommendation/selfRecommendation",
-    "pages/selfRecommendationDetail/selfRecommendationDetail",
-    "pages/message/message",
-    "pages/messageDetail/messageDetail",
-    "pages/home/home",
-    "pages/newFreeRecruitment/newFreeRecruitment",
-    "pages/newSelfRecommendation/newSelfRecommendation",
-    "pages/signUp/signUp"
-
-  ],
-  "window": {
-    "navigationStyle": "custom",
-    "backgroundTextStyle": "light",
-    "backgroundColor": "#e6e6e6",
-    "navigationBarTitleText": "CravingStudy",
-    "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#fff"
-
-  },
-  "usingComponents": {
-    "t-navbar": "tdesign-miniprogram/navbar/navbar",
-    "t-tabs": "tdesign-miniprogram/tabs/tabs",
-    "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel",
-    "t-cell": "tdesign-miniprogram/cell/cell",
-    "t-image": "tdesign-miniprogram/image/image",
-    "t-button": "tdesign-miniprogram/button/button",
-    "t-dialog": "tdesign-miniprogram/dialog/dialog",
-    "t-picker": "tdesign-miniprogram/picker/picker",
-    "t-picker-item": "tdesign-miniprogram/picker/picker-item",
-    "t-icon": "tdesign-miniprogram/icon/icon",
-    "t-input": "tdesign-miniprogram/input/input",
-    "t-textarea": "tdesign-miniprogram/textarea/textarea",
-    "t-side-bar": "tdesign-miniprogram/side-bar/side-bar",
-    "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item",
-    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
-  },
-
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "color": "#bfbfbf",
-    "selectedColor": "#0052d9",
-    "backgroundColor": "white",
-    "list": [{
-        "pagePath": "pages/freeRecruitment/freeRecruitment",
-        "text": "自由招聘",
-        "iconPath": "images/tarbar/freeRecruitment.png",
-        "selectedIconPath": "images/tarbar/freeRecruitment_s.png"
-      },
-      {
-        "pagePath": "pages/selfRecommendation/selfRecommendation",
-        "text": "大学生自荐",
-        "iconPath": "images/tarbar/selfRecommendation.png",
-        "selectedIconPath": "images/tarbar/selfRecommendation_s.png"
-      },
-      {
-        "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "images/tarbar/message.png",
-        "selectedIconPath": "images/tarbar/message_s.png"
-      },
-      {
-        "pagePath": "pages/home/home",
-        "text": "个人中心",
-        "iconPath": "images/tarbar/home.png",
-        "selectedIconPath": "images/tarbar/home_s.png"
-      }
-
+    "pages": [
+        "pages/hello/hello",
+        "pages/freeRecruitment/freeRecruitment",
+        "pages/freeRecruitmentDetail/freeRecruitmentDetail",
+        "pages/selfRecommendation/selfRecommendation",
+        "pages/selfRecommendationDetail/selfRecommendationDetail",
+        "pages/message/message",
+        "pages/messageDetail/messageDetail",
+        "pages/home/home",
+        "pages/newFreeRecruitment/newFreeRecruitment",
+        "pages/newSelfRecommendation/newSelfRecommendation",
+        "pages/signUp/signUp",
+        "pages/uploadTest/uploadTest"
     ],
-    "position": "bottom"
-  },
-
-
-  "plugins": {
-
-    "citySelector": {
-      "version": "1.0.2",
-      "provider": "wx63ffb7b7894e99ae"
+    "window": {
+        "navigationStyle": "custom",
+        "backgroundTextStyle": "light",
+        "backgroundColor": "#e6e6e6",
+        "navigationBarTitleText": "CravingStudy",
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#fff"
     },
-    "routePlan": {
-        "version": "1.0.18",
-        "provider": "wx50b5593e81dd937a"
+    "usingComponents": {
+        "t-navbar": "tdesign-miniprogram/navbar/navbar",
+        "t-tabs": "tdesign-miniprogram/tabs/tabs",
+        "t-tab-panel": "tdesign-miniprogram/tabs/tab-panel",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-image": "tdesign-miniprogram/image/image",
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-dialog": "tdesign-miniprogram/dialog/dialog",
+        "t-picker": "tdesign-miniprogram/picker/picker",
+        "t-picker-item": "tdesign-miniprogram/picker/picker-item",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-input": "tdesign-miniprogram/input/input",
+        "t-textarea": "tdesign-miniprogram/textarea/textarea",
+        "t-side-bar": "tdesign-miniprogram/side-bar/side-bar",
+        "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item",
+        "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#bfbfbf",
+        "selectedColor": "#0052d9",
+        "backgroundColor": "white",
+        "list": [
+            {
+                "pagePath": "pages/freeRecruitment/freeRecruitment",
+                "text": "自由招聘",
+                "iconPath": "images/tarbar/freeRecruitment.png",
+                "selectedIconPath": "images/tarbar/freeRecruitment_s.png"
+            },
+            {
+                "pagePath": "pages/uploadTest/uploadTest",
+                "text": "大学生自荐",
+                "iconPath": "images/tarbar/selfRecommendation.png",
+                "selectedIconPath": "images/tarbar/selfRecommendation_s.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "消息",
+                "iconPath": "images/tarbar/message.png",
+                "selectedIconPath": "images/tarbar/message_s.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text": "个人中心",
+                "iconPath": "images/tarbar/home.png",
+                "selectedIconPath": "images/tarbar/home_s.png"
+            }
+        ],
+        "position": "bottom"
+    },
+    "plugins": {
+        "citySelector": {
+            "version": "1.0.2",
+            "provider": "wx63ffb7b7894e99ae"
+        },
+        "routePlan": {
+            "version": "1.0.18",
+            "provider": "wx50b5593e81dd937a"
         }
-  },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序定位"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序定位"
+        }
     }
-  }
-
 }
