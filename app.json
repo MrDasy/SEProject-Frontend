@@ -11,7 +11,8 @@
         "pages/newFreeRecruitment/newFreeRecruitment",
         "pages/newSelfRecommendation/newSelfRecommendation",
         "pages/signUp/signUp",
-        "pages/uploadTest/uploadTest"
+        "pages/uploadTest/uploadTest",
+        "pages/rollTest/rollTest"
     ],
     "window": {
         "navigationStyle": "custom",
@@ -51,7 +52,7 @@
                 "selectedIconPath": "images/tarbar/freeRecruitment_s.png"
             },
             {
-                "pagePath": "pages/uploadTest/uploadTest",
+                "pagePath": "pages/rollTest/rollTest",
                 "text": "大学生自荐",
                 "iconPath": "images/tarbar/selfRecommendation.png",
                 "selectedIconPath": "images/tarbar/selfRecommendation_s.png"

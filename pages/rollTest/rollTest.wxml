@@ -1,0 +1,17 @@
+<!--pages/rollTest/rollTest.wxml-->
+<t-navbar class="custom-navbar" title="大学生自荐" t-class-title="nav-title" />
+
+<swiper 
+    class="swiper" 
+    indicator-dots="false" 
+    vertical="{{true}}" 
+    bindchange="swiperChange" >
+  <swiper-item wx:for="{{dataArray}}" wx:key="index">
+    <view class="content-container">
+
+      <text class="content-text">testpage {{index}}</text>
+    </view>
+  </swiper-item>
+</swiper>
+
+
