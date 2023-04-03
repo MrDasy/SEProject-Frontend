@@ -12,7 +12,8 @@
         "pages/newSelfRecommendation/newSelfRecommendation",
         "pages/signUp/signUp",
         "pages/uploadTest/uploadTest",
-        "pages/rollTest/rollTest"
+        "pages/rollTest/rollTest",
+        "pages/test/test"
     ],
     "window": {
         "navigationStyle": "custom",
@@ -66,6 +67,12 @@
             {
                 "pagePath": "pages/home/home",
                 "text": "个人中心",
+                "iconPath": "images/tarbar/home.png",
+                "selectedIconPath": "images/tarbar/home_s.png"
+            },
+            {
+                "pagePath": "pages/test/test",
+                "text": "测试",
                 "iconPath": "images/tarbar/home.png",
                 "selectedIconPath": "images/tarbar/home_s.png"
             }

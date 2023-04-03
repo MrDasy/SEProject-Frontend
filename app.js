@@ -1,19 +1,8 @@
 // app.js
-const local_url = "http://localhost:9903"
-const remote_url = "http://121.36.225.155:9903"
-const local_debug = false
-
-function getUrl() {
-    return local_debug ? local_url : remote_url
-}
-
 App({
-    onLaunch() {
-        // 展示本地存储能力
-        const logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
-    },
+    local_url : "http://localhost:9903",
+    remote_url : "http://121.36.225.155:9903",
+    local_debug : false,
 
     globalData: {
         user_id: 1,
@@ -30,9 +19,13 @@ App({
         userAvatar: 'https://cdn-we-retail.ym.tencent.com/retail-ui/components-exp/avatar/avatar-v2/1.png',
     },
 
+    apiUrl: function() { //获取api地址
+        return this.local_debug ? this.local_url : this.remote_url
+    },
+
     getSessionKey: function (c) {
         wx.request({
-            url: getUrl() + '/auth/session',
+            url: this.apiUrl() + '/auth/session',
             method: 'POST',
             header: {
                 'content-type': 'application/x-www-form-urlencoded'

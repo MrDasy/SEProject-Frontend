@@ -1,0 +1,3 @@
+<view class="test-text">
+    <text class="test-target" bind:tap="onTap">{{info}}</text>
+</view>

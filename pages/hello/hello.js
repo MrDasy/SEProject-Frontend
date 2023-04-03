@@ -1,7 +1,7 @@
 // pages/hello/hello.js
 const app = getApp()
 Page({
-    signin() {
+    signin() { //登录事件
         if (app.globalData.didLogin) {
             wx.switchTab({
                 url: '../freeRecruitment/freeRecruitment'
@@ -11,7 +11,7 @@ Page({
         }
     },
 
-    signup() {
+    signup() { //注册事件
         console.log('route');
         wx.navigateTo({
             url: '../signUp/signUp'
