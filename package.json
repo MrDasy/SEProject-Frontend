@@ -18,5 +18,8 @@
   "homepage": "https://github.com/MrDasy/SEProject-Frontend#readme",
   "dependencies": {
     "tdesign-miniprogram": "^0.32.0"
+  },
+  "devDependencies": {
+    "miniprogram-automator": "^0.5.1"
   }
 }

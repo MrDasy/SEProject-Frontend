@@ -5,8 +5,8 @@ automator.launch({
   projectPath: '/Users/skyzhou/Documents/Workspace/SEProj/MP', // 项目文件地址
 }).then(async miniProgram => {
   const page = await miniProgram.reLaunch('/pages/test/test')
-  await page.waitFor(500)
-  const element = await page.$('.user-motto')
+  await page.waitFor(100)
+  const element = await page.$('.test-target')
   console.log(await element.attribute('class'))
   await element.tap()
  
