@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/landing/landing",
+        "pages/Landing/index",
         "pages/freeRecruitment/freeRecruitment",
         "pages/freeRecruitmentDetail/freeRecruitmentDetail",
         "pages/selfRecommendation/selfRecommendation",

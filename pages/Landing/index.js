@@ -12,9 +12,18 @@ Page({
     },
 
     signup() { //注册事件
-        console.log('route');
         wx.navigateTo({
             url: '../signUp/signUp'
+        })
+    },
+
+    onLoad: function(){
+        wx.login({
+            success: (res) => {
+                if (res.code) {
+                    app.getSession(res.code)
+                }
+            }
         })
     },
 
@@ -38,6 +47,5 @@ Page({
             animated: this.animated.export(),
             animated1: this.animated1.export()
         })
-        app.getSessionCode()
     },
 })
