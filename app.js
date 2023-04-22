@@ -2,7 +2,7 @@
 App({
     local_url: "http://localhost:9903",
     remote_url: "http://121.36.225.155:9903",
-    local_debug: true,
+    local_debug: false,
 
     globalData: {
         user_id: -1,

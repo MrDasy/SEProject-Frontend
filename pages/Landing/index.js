@@ -1,4 +1,4 @@
-// pages/hello/hello.js
+
 const app = getApp()
 Page({
     signin() { //登录事件

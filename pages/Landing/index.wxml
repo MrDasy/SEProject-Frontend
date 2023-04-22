@@ -1,5 +1,3 @@
-<!--pages/hello/hello.wxml-->
-
 <view class="ctn">
     <view class="anim-pic">
         <image src="../../images/logo.png" animation="{{animated}}"></image>
