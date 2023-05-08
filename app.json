@@ -69,12 +69,6 @@
                 "text": "个人中心",
                 "iconPath": "images/tarbar/home.png",
                 "selectedIconPath": "images/tarbar/home_s.png"
-            },
-            {
-                "pagePath": "pages/test/test",
-                "text": "测试",
-                "iconPath": "images/tarbar/home.png",
-                "selectedIconPath": "images/tarbar/home_s.png"
             }
         ],
         "position": "bottom"
@@ -85,7 +79,7 @@
             "provider": "wx63ffb7b7894e99ae"
         },
         "routePlan": {
-            "version": "1.0.18",
+            "version": "1.0.19",
             "provider": "wx50b5593e81dd937a"
         }
     },

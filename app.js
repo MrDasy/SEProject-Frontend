@@ -15,7 +15,7 @@ App({
         isTutor: true, //是否是家教
         didLogin: false,
         userName: '用户名',
-        userAvatar: 'https://cdn-we-retail.ym.tencent.com/retail-ui/components-exp/avatar/avatar-v2/1.png',
+        userAvatar: '/images/default-avatar.png',
     },
 
     apiUrl: function () { //获取api地址
@@ -49,7 +49,6 @@ App({
     doLogin: function () {
         if (this.globalData.didLogin)
             return
-        console.log(this.globalData.sessionKey)
         wx.getUserProfile({
             desc: 'desc',
             success: res => {
